@@ -1,0 +1,14 @@
+<h2>Downmixing</h2>
+<prism language="javascript">var downmixContext = new OfflineAudioContext(
+        1,
+        audioBuffer.length,
+        11025
+    );
+var bufferSource = downmixContext.createBufferSource();
+
+bufferSource.buffer = audioBuffer;
+bufferSource.connect(downmixContext.destination);
+bufferSource.start();
+
+downmixContext.startRendering();
+// will resolve with the downmixed audioBuffer</prism>

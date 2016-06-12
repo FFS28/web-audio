@@ -1,0 +1,7 @@
+*.DS_Store
+**/*.baseDir.*
+.tscache
+build/
+node_modules/
+test/**/*.js
+test/**/*.js.map

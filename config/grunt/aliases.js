@@ -23,7 +23,7 @@ module.exports = {
     ],
     deploy: [
         'build:production',
-        'gh-pages'
+        'if:deploy'
     ],
     monitor: [
         'build:development',

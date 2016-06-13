@@ -56,6 +56,8 @@ module.exports = function (config) {
         };
 
     if (process.env.TRAVIS) {
+        configuration.browserNoActivityTimeout = 120000;
+
         configuration.browsers = [
             'ChromeSauceLabs'
         ];

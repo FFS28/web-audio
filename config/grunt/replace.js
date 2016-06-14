@@ -68,11 +68,11 @@ module.exports = {
             ]
         },
         options: {
-            // patterns: [ {
-            //     match: /bundles:\s{/,
-            //     replacement: `baseURL: '/web-audio-conference-2016,
-            //         bundles: {`
-            // } ]
+            patterns: [ {
+                match: /bundles:\s{/,
+                replacement: `baseURL: '/web-audio-conference-2016',
+                    bundles: {`
+            } ]
         }
     }
 

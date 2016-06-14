@@ -23,6 +23,7 @@ module.exports = {
     ],
     deploy: [
         'build:production',
+        'replace:index',
         'if:deploy'
     ],
     monitor: [

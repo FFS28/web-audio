@@ -41,5 +41,18 @@ module.exports = {
                 replacement: '$1'
             } ]
         }
+    },
+    index: {
+        files: {
+            'build/404.html': [
+                'build/404.html'
+            ]
+        },
+        options: {
+            patterns: [ {
+                match: /<base\shref="\/">/,
+                replacement: '<base href="/web-audio-conference-2016">'
+            } ]
+        }
     }
 };

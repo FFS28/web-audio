@@ -4,9 +4,6 @@ module.exports = {
     common: {
         files: [
             {
-                dest: 'build/index.html',
-                src: 'src/index.html'
-            }, {
                 dest: 'build/scripts/prism.js',
                 src: 'node_modules/prismjs/prism.js'
             }, {
@@ -24,6 +21,9 @@ module.exports = {
     monitor: {
         files: [
             {
+                dest: 'build/index.html',
+                src: 'src/index.html'
+            }, {
                 cwd: 'src/',
                 dest: 'build/',
                 expand: true,
@@ -37,6 +37,9 @@ module.exports = {
     preview: {
         files: [
             {
+                dest: 'build/404.html',
+                src: 'src/index.html'
+            }, {
                 cwd: 'src/',
                 dest: 'build/',
                 expand: true,

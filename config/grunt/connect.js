@@ -21,7 +21,7 @@ module.exports = {
             hostname: 'localhost',
             livereload: true,
             middleware: (connect, options, middlewares) => [
-                modrewrite(['^[^\\.]*$ /index.html [L]']),
+                modrewrite(['^[^\\.]*$ /404.html [L]']),
                 ...middlewares
             ],
             port: 9955

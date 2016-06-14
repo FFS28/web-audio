@@ -53,10 +53,10 @@ module.exports = {
                 match: /<base\shref="\/">/,
                 replacement: '<base href="/web-audio-conference-2016">'
             }, {
-                match: /<link\shref="styles\//,
+                match: /<link\shref="styles\//g,
                 replacement: '<link href="web-audio-conference-2016/styles/'
             }, {
-                match: /<script\ssrc="scripts\//,
+                match: /<script\ssrc="scripts\//g,
                 replacement: '<script src="web-audio-conference-2016/scripts/'
             } ]
         }

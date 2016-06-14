@@ -24,6 +24,7 @@ module.exports = {
     deploy: [
         'build:production',
         'replace:index',
+        'replace:systemjs',
         'if:deploy'
     ],
     monitor: [

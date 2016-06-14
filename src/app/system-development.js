@@ -23,7 +23,7 @@ System.config({
             defaultExtension: 'js',
             main: 'index.js'
         },
-        '@angular/router-deprecated': {
+        '@angular/router': {
             defaultExtension: 'js',
             main: 'index.js'
         },

@@ -1,63 +1,6 @@
-import { AfterViewInit, Component, ViewChildren, QueryList } from '@angular/core';
-import { CanReuse, ComponentInstruction, OnReuse, Router, RouteConfig, ROUTER_DIRECTIVES, RouteParams } from '@angular/router-deprecated';
-import { SlideEightComponent } from '../slide-eight/component';
-import { SlideEighteenComponent } from '../slide-eighteen/component';
-import { SlideElevenComponent } from '../slide-eleven/component';
-import { SlideFifteenComponent } from '../slide-fifteen/component';
-import { SlideFiveComponent } from '../slide-five/component';
-import { SlideFourComponent } from '../slide-four/component';
-import { SlideFourteenComponent } from '../slide-fourteen/component';
-import { SlideNineComponent } from '../slide-nine/component';
-import { SlideNineteenComponent } from '../slide-nineteen/component';
-import { SlideOneComponent } from '../slide-one/component';
-import { SlideSevenComponent } from '../slide-seven/component';
-import { SlideSeventeenComponent } from '../slide-seventeen/component';
-import { SlideSixComponent } from '../slide-six/component';
-import { SlideSixteenComponent } from '../slide-sixteen/component';
-import { SlideTenComponent } from '../slide-ten/component';
-import { SlideThirteenComponent } from '../slide-thirteen/component';
-import { SlideThreeComponent } from '../slide-three/component';
-import { SlideTwelveComponent } from '../slide-twelve/component';
-import { SlideTwentyComponent } from '../slide-twenty/component';
-import { SlideTwentyOneComponent } from '../slide-twenty-one/component';
-import { SlideTwentyThreeComponent } from '../slide-twenty-three/component';
-import { SlideTwentyTwoComponent } from '../slide-twenty-two/component';
-import { SlideTwoComponent } from '../slide-two/component';
-
-const SLIDES = [
-          SlideOneComponent,
-          SlideTwoComponent,
-          SlideThreeComponent,
-          SlideFourComponent,
-          SlideFiveComponent,
-          SlideSixComponent,
-          SlideSevenComponent,
-          SlideEightComponent,
-          SlideNineComponent,
-          SlideTenComponent,
-          SlideElevenComponent,
-          SlideTwelveComponent,
-          SlideThirteenComponent,
-          SlideFourteenComponent,
-          SlideFifteenComponent,
-          SlideSixteenComponent,
-          SlideSeventeenComponent,
-          SlideEighteenComponent,
-          SlideNineteenComponent,
-          SlideTwentyComponent,
-          SlideTwentyOneComponent,
-          SlideTwentyTwoComponent,
-          SlideTwentyThreeComponent
-      ];
-
-const ROUTE_CONFIG = SLIDES.map((slide, index) => {
-          return {
-              component: slide,
-              name: `Slide${ index }`,
-              path: `/${ index + 1 }`,
-              useAsDefault: index === 0
-          };
-      });
+import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { SlidesRoutes } from './routes';
 
 @Component({
     directives: [ ROUTER_DIRECTIVES ],
@@ -66,42 +9,36 @@ const ROUTE_CONFIG = SLIDES.map((slide, index) => {
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
 })
-@RouteConfig(ROUTE_CONFIG)
-export class SlidesComponent implements AfterViewInit, CanReuse, OnReuse {
+export class SlidesComponent implements OnDestroy, OnInit {
 
-    // private _index: number;
-    //
+    private _activatedRoute: ActivatedRoute;
+
+    private _index: number;
+
     private _router: Router;
-    //
-    // @ViewChildren(SlideComponent) slides: QueryList<SlideComponent>;
-    //
-    constructor (routeParams: RouteParams, router: Router) {
-    //     this._index = parseInt(routeParams.get('index'), 10);
+
+    private _routerEventsSubscription: any;
+
+    constructor (activatedRoute: ActivatedRoute, router: Router) {
+        this._activatedRoute = activatedRoute;
         this._router = router;
     }
 
     private _goToNextSlide () {
-        ROUTE_CONFIG
-            .slice(0, -1)
-            .some((routeDefinition, index) => {
-                if (this._router.isRouteActive(this._router.generate([ routeDefinition.name ]))) {
-                    this._router.navigate([ ROUTE_CONFIG[ index + 1 ].name ]);
-
-                    return true;
-                }
-            });
+        if (this._index) {
+            if (this._index < SlidesRoutes.length) {
+                this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
+            }
+        } else {
+            // @todo Remove absolute routing when possible.
+            this._router.navigateByUrl('/slides/2');
+        }
     }
 
     private _goToPreviousSlide () {
-        ROUTE_CONFIG
-            .slice(1)
-            .some((routeDefinition, index) => {
-                if (this._router.isRouteActive(this._router.generate([ routeDefinition.name ]))) {
-                    this._router.navigate([ ROUTE_CONFIG[ index ].name ]);
-
-                    return true;
-                }
-            });
+        if (this._index > 1) {
+            this._router.navigate([ `${ this._index - 1 }` ], { relativeTo: this._activatedRoute });
+        }
     }
 
     handleKeyUp (event) {
@@ -120,22 +57,25 @@ export class SlidesComponent implements AfterViewInit, CanReuse, OnReuse {
         this._goToPreviousSlide();
     }
 
-    ngAfterViewInit () {
-        // if (this._index > -1 && this._index < this.slides.length) {
-        //     this.slides.toArray()[ this._index ].isDisplayed = true;
-        // } else {
-        //     this._router.navigate([ 'Slide', { index: 0 } ]);
-        // }
+    ngOnDestroy () {
+        this._routerEventsSubscription.unsubscribe();
     }
 
-    routerCanReuse(next: ComponentInstruction, prev: ComponentInstruction) {
-        return true;
-    }
+    ngOnInit () {
+        this._routerEventsSubscription = this._router.events
+            .subscribe(() => {
+                const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
 
-    routerOnReuse(next: ComponentInstruction, prev: ComponentInstruction) {
-        // this.slides.toArray()[ this._index ].isDisplayed = false;
-        // this._index = parseInt(next.params['index'], 10);
-        // this.slides.toArray()[ this._index ].isDisplayed = true;
+                if (activatedChildRoute && activatedChildRoute.snapshot.urlSegments.length > 0) {
+                    this._index = parseInt(activatedChildRoute.snapshot.urlSegments[0].path, 10);
+                }
+            });
+
+        const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
+
+        if (activatedChildRoute && activatedChildRoute.snapshot.urlSegments.length > 0) {
+            this._index = parseInt(activatedChildRoute.snapshot.urlSegments[0].path, 10);
+        }
     }
 
 }

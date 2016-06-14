@@ -52,6 +52,12 @@ module.exports = {
             patterns: [ {
                 match: /<base\shref="\/">/,
                 replacement: '<base href="/web-audio-conference-2016">'
+            }, {
+                match: /<link\shref="styles\//,
+                replacement: '<base href="web-audio-conference-2016/styles/">'
+            }, {
+                match: /<script\ssrc="scripts\//,
+                replacement: '<script src="web-audio-conference-2016/scripts/">'
             } ]
         }
     },

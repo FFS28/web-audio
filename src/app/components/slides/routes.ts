@@ -48,10 +48,14 @@ const SLIDES = [
     SlideTwentyThreeComponent
 ];
 
-export const SlidesRoutes = SLIDES.map((slide, index) => {
+const SlideComponentsRoutes = SLIDES.map((slide, index) => {
     return {
         component: slide,
-        index: index === 0,
-        path: `/${ index + 1 }`
+        path: `${ index + 1 }`
     }
 });
+
+export const SlidesRoutes = [ ...SlideComponentsRoutes, {
+    path: '**',
+    redirectTo: '1'
+} ];

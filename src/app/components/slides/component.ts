@@ -25,13 +25,8 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     private _goToNextSlide () {
-        if (this._index) {
-            if (this._index < SlidesRoutes.length) {
-                this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
-            }
-        } else {
-            // @todo Remove absolute routing when possible.
-            this._router.navigateByUrl('/slides/2');
+        if (this._index < SlidesRoutes.length) {
+            this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
         }
     }
 
@@ -66,16 +61,12 @@ export class SlidesComponent implements OnDestroy, OnInit {
             .subscribe(() => {
                 const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
 
-                if (activatedChildRoute && activatedChildRoute.snapshot.urlSegments.length > 0) {
-                    this._index = parseInt(activatedChildRoute.snapshot.urlSegments[0].path, 10);
-                }
+                this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             });
 
         const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
 
-        if (activatedChildRoute && activatedChildRoute.snapshot.urlSegments.length > 0) {
-            this._index = parseInt(activatedChildRoute.snapshot.urlSegments[0].path, 10);
-        }
+        this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
     }
 
 }

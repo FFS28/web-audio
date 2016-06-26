@@ -5,7 +5,6 @@ import { SlidesRoutes } from './routes';
 @Component({
     directives: [ ROUTER_DIRECTIVES ],
     moduleId: __moduleName,
-    selector: 'slides',
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
 })

@@ -30,8 +30,8 @@ module.exports = function (config) {
 
                 // paths loaded via module imports
                 // Angular itself
-                { included: false, pattern: 'node_modules/@angular/**/*.js', watched: true },
-                { included: false, pattern: 'node_modules/@angular/**/*.js.map', watched: true },
+                { included: false, pattern: 'node_modules/@angular/!(tsc-wrapped)/**/*.js', watched: true },
+                { included: false, pattern: 'node_modules/@angular/!(tsc-wrapped)/**/*.js.map', watched: true },
 
                 // Our built application code
                 { included: false, pattern: 'build/**/*.js', watched: true },

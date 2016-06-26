@@ -1,3 +1,4 @@
+import { RouterConfig } from '@angular/router';
 import { SlideEightComponent } from '../slide-eight/component';
 import { SlideEighteenComponent } from '../slide-eighteen/component';
 import { SlideElevenComponent } from '../slide-eleven/component';
@@ -55,7 +56,7 @@ const SlideComponentsRoutes = SLIDES.map((slide, index) => {
     }
 });
 
-export const SlidesRoutes = [ ...SlideComponentsRoutes, {
+export const SlidesRoutes: RouterConfig = [ ...SlideComponentsRoutes, {
     path: '**',
     redirectTo: '1'
 } ];

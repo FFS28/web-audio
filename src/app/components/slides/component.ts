@@ -24,7 +24,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     private _goToNextSlide () {
-        if (this._index < SlidesRoutes.length) {
+        if (this._index < SlidesRoutes.length - 1) {
             this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
         }
     }

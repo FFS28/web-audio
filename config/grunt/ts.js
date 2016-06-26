@@ -6,7 +6,7 @@ module.exports = {
             rootDir: 'src/'
         },
         outDir: 'build/',
-        src: [ 'src/app/**/*.ts', 'src/typings.d.ts'  ],
+        src: [ 'src/app/**/*.ts', 'src/typings.d.ts' ],
         tsconfig: 'config/typescript/app.json'
     },
     test: {

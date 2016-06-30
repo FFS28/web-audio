@@ -21,6 +21,12 @@ module.exports = {
         'replace:bundle',
         'clean:temporary'
     ],
+    continuous: [
+        'clean:all',
+        'ts:test',
+        'karma:continuous',
+        'watch:continuous'
+    ],
     deploy: [
         'build:production',
         'replace:index',

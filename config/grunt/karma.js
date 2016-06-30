@@ -2,7 +2,9 @@
 
 module.exports = {
     continuous: {
-        configFile: 'config/karma/unit.js'
+        background: true,
+        configFile: 'config/karma/unit.js',
+        singleRun: false
     },
     test: {
         configFile: 'config/karma/unit.js',

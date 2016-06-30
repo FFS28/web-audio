@@ -6,7 +6,16 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "removeComments": false,
+    "rootDir": "./",
     "sourceMap": true,
     "target": "es5"
-  }
+  },
+  "exclude": [
+    ".git",
+    ".tscache",
+    "build",
+    "config",
+    "node_modules",
+    "typings"
+  ]
 }

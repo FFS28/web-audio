@@ -5,7 +5,9 @@
     "module": "system",
     "moduleResolution": "node",
     "noImplicitAny": false,
+    "outDir": "../../build/",
     "removeComments": false,
+    "rootDir": "../",
     "sourceMap": true,
     "target": "es5"
   }

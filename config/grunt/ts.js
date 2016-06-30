@@ -5,16 +5,14 @@ module.exports = {
         options: {
             rootDir: 'src/'
         },
-        outDir: 'build/',
-        src: [ 'src/app/**/*.ts', 'src/typings.d.ts' ],
-        tsconfig: 'config/typescript/app.json'
+        tsconfig: 'src/app/tsconfig.json'
     },
     test: {
         options: {
-            rootDir: 'test/'
+            rootDir: './'
         },
-        outDir: 'test/',
-        src: [ 'test/typings.d.ts', 'test/unit/components/*.ts' ],
+        outDir: 'build/',
+        src: [ 'test/unit/**/*.ts', 'typings/index.d.ts' ],
         tsconfig: 'config/typescript/test.json'
     }
 };

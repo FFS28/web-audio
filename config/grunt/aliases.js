@@ -44,6 +44,7 @@ module.exports = {
         'watch:preview'
     ],
     test: [
+        'clean:all',
         'ts:test',
         'karma:test'
     ]

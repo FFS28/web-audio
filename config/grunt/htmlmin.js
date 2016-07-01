@@ -6,9 +6,10 @@ module.exports = {
             cwd: 'src/',
             dest: 'build/',
             expand: true,
-            src: [ 'app/**/*.html' ]
+            src: [ '**/*.html' ]
         } ],
         options: {
+            caseSensitive: true,
             collapseBooleanAttributes: true,
             collapseWhitespace: true,
             removeComments: true

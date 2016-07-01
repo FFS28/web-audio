@@ -75,7 +75,4 @@ module.exports = {
             } ]
         }
     }
-
-
-
 };

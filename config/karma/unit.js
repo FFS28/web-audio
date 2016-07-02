@@ -2,6 +2,7 @@
 
 module.exports = function (config) {
 
+    /* eslint-disable indent */
     var configuration = {
 
             basePath: '../../',
@@ -54,6 +55,7 @@ module.exports = function (config) {
             }
 
         };
+    /* eslint-enable indent */
 
     if (process.env.TRAVIS) {
         configuration.browserNoActivityTimeout = 120000;

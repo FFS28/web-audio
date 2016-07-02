@@ -1,7 +1,7 @@
 'use strict';
 
-var path = require('path'),
-    fs = require('fs');
+var fs = require('fs'),
+    path = require('path');
 
 module.exports = {
     assets: {
@@ -24,7 +24,7 @@ module.exports = {
                     var asset = path.resolve(path.dirname(sourceFilename), assetFilename);
 
                     // return `template: '${ fs.readFileSync(asset).toString().replace(/'/g, '\\\'') }'`;
-                    return `template: \`${ fs.readFileSync(asset).toString().replace(/`/g, '\\\`') }\``;
+                    return `template: \`${ fs.readFileSync(asset).toString().replace(/`/g, '\\\`') }\``; // eslint-disable-line newline-per-chained-call, no-useless-escape
                 }
             } ]
         }

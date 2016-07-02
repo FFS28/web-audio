@@ -1,3 +1,7 @@
+'use strict';
+
+var allSpecFiles;
+
 /*global jasmine, __karma__, window*/
 Error.stackTraceLimit = Infinity;
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
@@ -5,16 +9,16 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 __karma__.loaded = function () {};
 
 function isJsFile (path) {
-    return path.slice(-3) == '.js';
+    return path.slice(-3) === '.js';
 }
 
 function isSpecFile (path) {
     return path.includes('/test/');
 }
 
-var allSpecFiles = Object.keys(window.__karma__.files)
-  .filter(isSpecFile)
-  .filter(isJsFile);
+allSpecFiles = Object.keys(window.__karma__.files)
+    .filter(isSpecFile)
+    .filter(isJsFile);
 
 // Load our SystemJS configuration.
 System.config({
@@ -48,11 +52,11 @@ System.config({
             defaultExtension: 'js',
             main: 'index.js'
         },
-        app: {
+        'app': {
             defaultExtension: 'js',
             main: 'main.js'
         },
-        rxjs: {
+        'rxjs': {
             defaultExtension: 'js'
         }
     }

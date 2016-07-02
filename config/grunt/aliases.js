@@ -21,32 +21,33 @@ module.exports = {
         'replace:bundle',
         'clean:temporary'
     ],
-    continuous: [
+    'continuous': [
         'clean:all',
         'ts:test',
         'karma:continuous',
         'watch:continuous'
     ],
-    deploy: [
+    'deploy': [
         'build:production',
         'replace:index',
         'replace:systemjs',
         'if:deploy'
     ],
-    lint: [
+    'lint': [
+        'eslint',
         'tslint'
     ],
-    monitor: [
+    'monitor': [
         'build:development',
         'connect:monitor',
         'watch:monitor'
     ],
-    preview: [
+    'preview': [
         'build:production',
         'connect:preview',
         'watch:preview'
     ],
-    test: [
+    'test': [
         'clean:all',
         'ts:test',
         'karma:test'

@@ -27,7 +27,7 @@ System.config({
             defaultExtension: 'js',
             main: 'index.js'
         },
-        app: {
+        'app': {
             defaultExtension: 'js'
         },
         'reflect-metadata': {
@@ -36,10 +36,10 @@ System.config({
                 crypto: '@empty'
             }
         },
-        rxjs: {
+        'rxjs': {
             defaultExtension: 'js'
         },
-        zone: {
+        'zone': {
             main: 'dist/zone.js'
         }
     }

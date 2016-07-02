@@ -36,6 +36,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csso": "^1.0.0",
     "grunt-gh-pages": "^1.1.0",
+    "grunt-githooks": "^0.6.0",
     "grunt-if": "^0.1.5",
     "grunt-karma": "^2.0.0",
     "grunt-replace": "^1.0.1",

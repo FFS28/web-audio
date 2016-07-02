@@ -33,6 +33,9 @@ module.exports = {
         'replace:systemjs',
         'if:deploy'
     ],
+    lint: [
+        'tslint'
+    ],
     monitor: [
         'build:development',
         'connect:monitor',

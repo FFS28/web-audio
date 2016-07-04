@@ -6,7 +6,7 @@ module.exports = {
             cwd: 'src/',
             dest: 'build/',
             expand: true,
-            src: [ 'app/**/*.css' ]
+            src: [ '**/*.css' ]
         } ]
     }
 };

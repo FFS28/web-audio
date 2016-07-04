@@ -9,12 +9,6 @@ module.exports = {
             }, {
                 dest: 'build/scripts/hammer.js',
                 src: 'node_modules/hammerjs/hammer.js'
-            }, {
-                dest: 'build/styles/styles.css',
-                src: 'src/styles/styles.css'
-            }, {
-                dest: 'build/styles/prism-okaidia.css',
-                src: 'node_modules/prismjs/themes/prism-okaidia.css'
             }
         ]
     },
@@ -29,8 +23,14 @@ module.exports = {
                 expand: true,
                 src: [ 'app/**/*.css', 'app/**/*.html' ]
             }, {
+                dest: 'build/styles/styles.css',
+                src: 'src/styles/styles.css'
+            }, {
                 dest: 'build/scripts/system.js',
                 src: 'node_modules/systemjs/dist/system.src.js'
+            }, {
+                dest: 'build/styles/prism-okaidia.css',
+                src: 'node_modules/prismjs/themes/prism-okaidia.css'
             }
         ]
     },

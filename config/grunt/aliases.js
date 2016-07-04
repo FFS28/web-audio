@@ -28,10 +28,13 @@ module.exports = {
         'watch:continuous'
     ],
     'deploy': [
-        'if:deploy',
         'build:production',
         'replace:index',
-        'replace:systemjs'
+        'replace:systemjs',
+        'gh-pages:deploy'
+    ],
+    'deploy-on-version-updates': [
+        'if:deploy'
     ],
     'lint': [
         'eslint',

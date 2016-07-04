@@ -2,7 +2,7 @@
 
 module.exports = {
     deploy: {
-        ifTrue: [ 'gh-pages:deploy' ],
+        ifTrue: [ 'deploy' ],
         options: {
             test: () => process.env.TRAVIS === 'true' &&
                     process.env.TRAVIS_PULL_REQUEST === 'false' &&

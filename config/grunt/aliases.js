@@ -28,10 +28,10 @@ module.exports = {
         'watch:continuous'
     ],
     'deploy': [
+        'if:deploy',
         'build:production',
         'replace:index',
-        'replace:systemjs',
-        'if:deploy'
+        'replace:systemjs'
     ],
     'lint': [
         'eslint',

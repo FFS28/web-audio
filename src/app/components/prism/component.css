@@ -2,6 +2,8 @@ code {
     font-size: 3.5vmin;
 }
 
-pre[class*="language-"] {
+pre[class*='language-'] {
+    /* stylelint-disable declaration-no-important */
     padding: 0 0.5em !important;
+    /* stylelint-enable declaration-no-important */
 }

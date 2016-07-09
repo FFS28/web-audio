@@ -3,7 +3,6 @@ code {
 }
 
 pre[class*='language-'] {
-    /* stylelint-disable declaration-no-important */
-    padding: 0 0.5em !important;
-    /* stylelint-enable declaration-no-important */
+    line-height: 1;
+    padding: 0 0.5em;
 }

@@ -45,7 +45,7 @@
     "grunt-systemjs-builder": "^0.2.7",
     "grunt-ts": "^5.5.1",
     "grunt-tslint": "^3.1.1",
-    "gruntify-eslint": "^2.0.0",
+    "gruntify-eslint": "^3.0.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.0.0",
     "karma-chrome-launcher": "^1.0.1",

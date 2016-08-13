@@ -10,8 +10,8 @@ module.exports = {
             repo: pkg.repository.url.replace(/:\/\//, `://${ process.env.GIT_HUB_ACCESS_TOKEN }@`),
             silent: true,
             user: {
-                name: process.env.GIT_HUB_USER_NAME,
-                email: process.env.GIT_HUB_USER_EMAIL
+                email: process.env.GIT_HUB_USER_EMAIL,
+                name: process.env.GIT_HUB_USER_NAME
             }
         },
         src: [ '**' ]

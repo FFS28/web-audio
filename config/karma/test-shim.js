@@ -27,9 +27,9 @@ System.config({
 
 System.config({
     map: {
-        'rxjs': 'node_modules/rxjs',
         '@angular': 'node_modules/@angular',
-        'app': 'build'
+        'app': 'build',
+        'rxjs': 'node_modules/rxjs'
     },
     packages: {
         '@angular/common': {

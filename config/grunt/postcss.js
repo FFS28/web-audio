@@ -8,18 +8,18 @@ module.exports = {
             processors: [
                 stylelint({
                     rules: {
-                        'block-no-single-line': true,
-                        'color-no-invalid-hex': true,
-                        'declaration-block-semicolon-newline-after': 'always',
-                        'declaration-block-semicolon-space-before': 'never',
-                        'declaration-block-trailing-semicolon': 'always',
                         'block-closing-brace-newline-after': 'always',
                         'block-closing-brace-newline-before': 'always',
                         'block-no-empty': true,
+                        'block-no-single-line': true,
                         'block-opening-brace-newline-after': 'always',
                         'block-opening-brace-newline-before': 'never-single-line',
+                        'color-no-invalid-hex': true,
                         'declaration-block-no-duplicate-properties': true,
                         'declaration-block-no-shorthand-property-overrides': true,
+                        'declaration-block-semicolon-newline-after': 'always',
+                        'declaration-block-semicolon-space-before': 'never',
+                        'declaration-block-trailing-semicolon': 'always',
                         'declaration-colon-space-after': 'always',
                         'declaration-colon-space-before': 'never',
                         'declaration-no-important': true,

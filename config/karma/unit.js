@@ -7,8 +7,6 @@ module.exports = function (config) {
 
             basePath: '../../',
 
-            frameworks: [ 'jasmine' ],
-
             files: [
                 // Polyfills.
                 'node_modules/reflect-metadata/Reflect.js',
@@ -47,6 +45,8 @@ module.exports = function (config) {
                 { included: false, pattern: 'src/**/*.ts', watched: false },
                 { included: false, pattern: 'build/**/*.js.map', watched: false }
             ],
+
+            frameworks: [ 'jasmine' ],
 
             // proxied base paths
             proxies: {

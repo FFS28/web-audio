@@ -3,7 +3,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SlidesRoutes } from './routes';
 
 @Component({
-    directives: [ ROUTER_DIRECTIVES ],
     moduleId: __moduleName,
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
@@ -62,10 +61,6 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
                 this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             });
-
-        const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
-
-        this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
     }
 
 }

@@ -1,8 +1,9 @@
 import { slidesRoutes } from './routes';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
+    changeDetection: ChangeDetectionStrategy.OnPush,
     moduleId: __moduleName,
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'

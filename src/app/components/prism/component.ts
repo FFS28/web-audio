@@ -8,15 +8,15 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } fro
 })
 export class PrismComponent implements AfterViewInit, OnChanges {
 
-    @Input() language: string;
+    @Input() public language: string;
 
-    @ViewChild('element') element: ElementRef;
+    @ViewChild('element') private element: ElementRef;
 
-    ngAfterViewInit () {
+    public ngAfterViewInit () {
         Prism.highlightElement(this.element.nativeElement);
     }
 
-    ngOnChanges () {
+    public ngOnChanges () {
         this.language = `language-${this.language}`;
 
         if (this.element !== undefined) {

@@ -1,10 +1,10 @@
-import { RouterConfig } from '@angular/router';
 import { SlidesComponent } from '../slides/component';
-import { SlidesRoutes } from '../slides/routes';
+import { slidesRoutes } from '../slides/routes';
+import { RouterConfig } from '@angular/router';
 
-export const AppRoutes: RouterConfig = [
+export const appRoutes: RouterConfig = [
     {
-        children: [ ...SlidesRoutes ],
+        children: [ ...slidesRoutes ],
         component: SlidesComponent,
         path: 'slides'
     }, {

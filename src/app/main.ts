@@ -1,9 +1,8 @@
-import 'reflect-metadata';
-import 'zone';
+import 'reflect-metadata'; // tslint:disable-line:ordered-imports
 import { AppModule } from './components/app/module';
-import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import 'zone';
 
 enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule);

@@ -1,9 +1,4 @@
-import { AppComponent } from './component';
-import { AppRoutes } from './routes';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { PrismComponent } from '../prism/component';
-import { RouterModule } from '@angular/router';
 import { SlideEightComponent } from '../slide-eight/component';
 import { SlideEighteenComponent } from '../slide-eighteen/component';
 import { SlideElevenComponent } from '../slide-eleven/component';
@@ -22,12 +17,17 @@ import { SlideTenComponent } from '../slide-ten/component';
 import { SlideThirteenComponent } from '../slide-thirteen/component';
 import { SlideThreeComponent } from '../slide-three/component';
 import { SlideTwelveComponent } from '../slide-twelve/component';
-import { SlideTwentyComponent } from '../slide-twenty/component';
 import { SlideTwentyOneComponent } from '../slide-twenty-one/component';
 import { SlideTwentyThreeComponent } from '../slide-twenty-three/component';
 import { SlideTwentyTwoComponent } from '../slide-twenty-two/component';
+import { SlideTwentyComponent } from '../slide-twenty/component';
 import { SlideTwoComponent } from '../slide-two/component';
 import { SlidesComponent } from '../slides/component';
+import { AppComponent } from './component';
+import { appRoutes } from './routes';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     bootstrap: [
@@ -63,7 +63,7 @@ import { SlidesComponent } from '../slides/component';
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(AppRoutes)
+        RouterModule.forRoot(appRoutes)
     ]
 })
 export class AppModule {}

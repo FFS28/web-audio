@@ -1,6 +1,6 @@
-import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { slidesRoutes } from './routes';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SlidesRoutes } from './routes';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     moduleId: __moduleName,
@@ -23,7 +23,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     private _goToNextSlide () {
-        if (this._index < SlidesRoutes.length - 1) {
+        if (this._index < slidesRoutes.length - 1) {
             this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
         }
     }
@@ -34,7 +34,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
         }
     }
 
-    handleKeyUp (event) {
+    public handleKeyUp (event) {
         if ((event.code && event.code === 'ArrowLeft') || event.keyCode === 37) {
             this._goToPreviousSlide();
         } else if ((event.code && event.code === 'ArrowRight') || event.keyCode === 39) {
@@ -42,19 +42,19 @@ export class SlidesComponent implements OnDestroy, OnInit {
         }
     }
 
-    handleSwipeLeft () {
+    public handleSwipeLeft () {
         this._goToNextSlide();
     }
 
-    handleSwipeRight () {
+    public handleSwipeRight () {
         this._goToPreviousSlide();
     }
 
-    ngOnDestroy () {
+    public ngOnDestroy () {
         this._routerEventsSubscription.unsubscribe();
     }
 
-    ngOnInit () {
+    public ngOnInit () {
         this._routerEventsSubscription = this._router.events
             .subscribe(() => {
                 const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);

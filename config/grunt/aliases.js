@@ -19,7 +19,10 @@ module.exports = {
         'replace:assets',
         'systemjs',
         'replace:bundle',
-        'clean:temporary'
+        'clean:temporary',
+        'rev',
+        'replace:index',
+        'replace:systemjs'
     ],
     'continuous': [
         'clean:all',
@@ -29,8 +32,6 @@ module.exports = {
     ],
     'deploy': [
         'build:production',
-        'replace:index',
-        'replace:systemjs',
         'gh-pages:deploy'
     ],
     'deploy-on-version-updates': [

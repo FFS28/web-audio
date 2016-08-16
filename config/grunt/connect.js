@@ -22,6 +22,7 @@ module.exports = {
             livereload: true,
             middleware: (connect, options, middlewares) => [
                 modrewrite([
+                    '^/web-audio-conference-2016$ /index.html [L]',
                     '^[^\\.]*$ /404.html [L]',
                     '^/web-audio-conference-2016/(.*)$ /$1 [L]'
                 ]),

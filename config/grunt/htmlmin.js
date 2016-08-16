@@ -6,7 +6,8 @@ module.exports = {
             cwd: 'src/',
             dest: 'build/',
             expand: true,
-            src: [ '**/*.html' ]
+            // Templates are not minified for now to preserve whitespace in code examples.
+            src: [ '*.html' ] // **/*.html
         } ],
         options: {
             caseSensitive: true,

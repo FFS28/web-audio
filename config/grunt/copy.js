@@ -37,9 +37,6 @@ module.exports = {
     preview: {
         files: [
             {
-                dest: 'build/404.html',
-                src: 'src/index.html'
-            }, {
                 cwd: 'src/',
                 dest: 'build/',
                 expand: true,

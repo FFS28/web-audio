@@ -14,7 +14,7 @@ module.exports = {
         'copy:preview',
         'concat:preview',
         'csso',
-        // 'htmlmin',
+        'htmlmin',
         'ts:app',
         'replace:assets',
         'systemjs',

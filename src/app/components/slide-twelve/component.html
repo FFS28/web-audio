@@ -1,5 +1,5 @@
 <h2>Apply FFT</h2>
-<prism language="javascript">var analyser = offlineAudioContext.createAnalyser();
+<prism language="javascript"><!-- htmlmin:ignore -->var analyser = offlineAudioContext.createAnalyser();
 var buffer = new Float32Array(analyser.fftSize);
 var scriptProcessor = offlineAudioContext.createScriptProcessor();
 
@@ -13,4 +13,4 @@ anyNodeThatOutputsSound
     .connect(scriptProcessor)
     .connect(offlineAudioContext.destination);
 
-offlineAudioContext.startRendering();</prism>
+offlineAudioContext.startRendering();<!-- htmlmin:ignore --></prism>

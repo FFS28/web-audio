@@ -37,11 +37,6 @@ module.exports = {
     preview: {
         files: [
             {
-                cwd: 'src/',
-                dest: 'build/',
-                expand: true,
-                src: [ 'app/**/*.html' ]
-            }, {
                 dest: 'build/scripts/system.js',
                 src: 'node_modules/systemjs/dist/system-csp-production.js'
             }

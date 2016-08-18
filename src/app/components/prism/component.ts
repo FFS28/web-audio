@@ -3,7 +3,7 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, O
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     moduleId: __moduleName,
-    selector: 'prism',
+    selector: 'wac-prism',
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
 })

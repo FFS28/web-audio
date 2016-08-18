@@ -1,5 +1,5 @@
 <h2>Downmixing</h2>
-<prism language="javascript"><!-- htmlmin:ignore -->var downmixContext = new OfflineAudioContext(
+<wac-prism language="javascript"><!-- htmlmin:ignore -->var downmixContext = new OfflineAudioContext(
         1,
         audioBuffer.length,
         11025
@@ -11,4 +11,4 @@ bufferSource.connect(downmixContext.destination);
 bufferSource.start();
 
 downmixContext.startRendering();
-// will resolve with the downmixed audioBuffer<!-- htmlmin:ignore --></prism>
+// will resolve with the downmixed audioBuffer<!-- htmlmin:ignore --></wac-prism>

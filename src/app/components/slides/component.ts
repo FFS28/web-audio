@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    moduleId: __moduleName,
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
 })

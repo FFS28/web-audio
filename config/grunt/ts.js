@@ -12,7 +12,7 @@ module.exports = {
             rootDir: './'
         },
         outDir: 'build/',
-        src: [ 'test/unit/**/*.ts', 'test/typings.d.ts' ],
+        src: [ 'test/unit/**/*.ts' ],
         tsconfig: 'config/typescript/test.json'
     }
 };

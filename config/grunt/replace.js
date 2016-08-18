@@ -68,6 +68,30 @@ module.exports = (grunt) => {
                 } ]
             }
         },
+        links: {
+            files: {
+                './': [
+                    'build/app/components/**/*.js'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /styleUrls:\s*\['(component\.css)'\]/g,
+                    replacement: (match, assetFilename, offset, string, sourceFilename) => {
+                        var asset = path.relative('build/', path.join(path.dirname(sourceFilename), assetFilename));
+
+                        return `styleUrls: [ '${ asset }' ]`;
+                    }
+                }, {
+                    match: /templateUrl:\s*'(component\.html)'/g,
+                    replacement: (match, assetFilename, offset, string, sourceFilename) => {
+                        var asset = path.relative('build/', path.join(path.dirname(sourceFilename), assetFilename));
+
+                        return `templateUrl: '${ asset }'`;
+                    }
+                } ]
+            }
+        },
         systemjs: {
             files: [ {
                 cwd: 'build/scripts/',

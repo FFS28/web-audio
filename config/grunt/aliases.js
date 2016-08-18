@@ -6,7 +6,8 @@ module.exports = {
         'copy:common',
         'copy:monitor',
         'concat:monitor',
-        'ts:app'
+        'ts:app',
+        'replace:links'
     ],
     'build:production': [
         'clean:all',

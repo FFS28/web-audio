@@ -2,7 +2,6 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, O
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    moduleId: __moduleName,
     selector: 'wac-prism',
     styleUrls: [ 'component.css' ],
     templateUrl: 'component.html'
@@ -14,14 +13,14 @@ export class PrismComponent implements AfterViewInit, OnChanges {
     @ViewChild('element') private element: ElementRef;
 
     public ngAfterViewInit () {
-        Prism.highlightElement(this.element.nativeElement);
+        Prism.highlightElement(this.element.nativeElement, false);
     }
 
     public ngOnChanges () {
         this.language = `language-${this.language}`;
 
         if (this.element !== undefined) {
-            Prism.highlightElement(this.element.nativeElement);
+            Prism.highlightElement(this.element.nativeElement, false);
         }
     }
 

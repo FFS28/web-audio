@@ -79,7 +79,7 @@
         "use-life-cycle-interface": true,
         "use-output-property-decorator": true,
         "use-pipe-transform-interface": true,
-        "variable-name": [ true, "check-format" ],
+        "variable-name": [ true, "allow-leading-underscore", "check-format" ],
         "whitespace": [ true, "check-branch", "check-decl", "check-module", "check-operator", "check-separator", "check-type", "check-typecast" ]
     }
 }

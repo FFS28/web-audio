@@ -28,7 +28,7 @@
     "babel-eslint": "^6.1.0",
     "codelyzer": "0.0.28",
     "connect-modrewrite": "^0.9.0",
-    "eslint-config-holy-grail": "^7.0.0",
+    "eslint-config-holy-grail": "^8.0.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",

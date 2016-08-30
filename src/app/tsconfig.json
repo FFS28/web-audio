@@ -2,6 +2,7 @@
   "angularCompilerOptions": {
     "genDir": "../../build/app/"
   },
+  "compileOnSave": false,
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

@@ -17,7 +17,7 @@ module.exports = (grunt) => {
                     replacement: (match, assetFilename, offset, string, sourceFilename) => {
                         var asset = path.resolve(path.dirname(sourceFilename), assetFilename);
 
-                        return `styles: ['${ fs.readFileSync(asset) }']`;
+                        return `styles: ["${ fs.readFileSync(asset) }"]`;
                     }
                 }, {
                     match: /templateUrl:\s*'(component\.html)'/g,

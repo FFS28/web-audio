@@ -57,7 +57,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
     public ngOnInit () {
         this._routerEventsSubscription = this._router.events
             .subscribe(() => {
-                const activatedChildRoute = this._router.routerState.firstChild(this._activatedRoute);
+                const activatedChildRoute = this._activatedRoute.firstChild;
 
                 this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             });

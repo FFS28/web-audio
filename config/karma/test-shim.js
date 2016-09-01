@@ -27,36 +27,24 @@ System.config({
 
 System.config({
     map: {
-        '@angular': 'node_modules/@angular',
+        '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
+        '@angular/compiler': 'node_modules/@angular/compiler/bundles/compiler.umd.js',
+        '@angular/compiler/testing': 'node_modules/@angular/compiler/bundles/compiler-testing.umd.js',
+        '@angular/core': 'node_modules/@angular/core/bundles/core.umd.js',
+        '@angular/core/testing': 'node_modules/@angular/core/bundles/core-testing.umd.js',
+        '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
+        '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+        '@angular/platform-browser-dynamic/testing': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+        '@angular/platform-browser/testing': 'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
         'app': 'build',
         'rxjs': 'node_modules/rxjs'
     },
     packages: {
-        '@angular/common': {
-            defaultExtension: 'js',
-            main: 'index.js'
-        },
-        '@angular/compiler': {
-            defaultExtension: 'js',
-            main: 'index.js'
-        },
-        '@angular/core': {
-            defaultExtension: 'js',
-            main: 'index.js'
-        },
-        '@angular/platform-browser': {
-            defaultExtension: 'js',
-            main: 'index.js'
-        },
-        '@angular/platform-browser-dynamic': {
-            defaultExtension: 'js',
-            main: 'index.js'
-        },
-        'app': {
+        app: {
             defaultExtension: 'js',
             main: 'main.js'
         },
-        'rxjs': {
+        rxjs: {
             defaultExtension: 'js'
         }
     }

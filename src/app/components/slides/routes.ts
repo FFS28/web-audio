@@ -21,7 +21,6 @@ import { SlideTwentyThreeComponent } from '../slide-twenty-three/component';
 import { SlideTwentyTwoComponent } from '../slide-twenty-two/component';
 import { SlideTwentyComponent } from '../slide-twenty/component';
 import { SlideTwoComponent } from '../slide-two/component';
-import { RouterConfig } from '@angular/router';
 
 const SLIDES = [
     SlideOneComponent,
@@ -56,7 +55,7 @@ const slideComponentsRoutes = SLIDES.map((slide, index) => {
     };
 });
 
-export const slidesRoutes: RouterConfig = [ ...slideComponentsRoutes, {
+export const slidesRoutes = [ ...slideComponentsRoutes, {
     path: '**',
     redirectTo: '1'
 } ];

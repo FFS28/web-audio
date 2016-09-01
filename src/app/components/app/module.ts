@@ -1,3 +1,4 @@
+import { routes } from '../../routes';
 import { PrismComponent } from '../prism/component';
 import { SlideEightComponent } from '../slide-eight/component';
 import { SlideEighteenComponent } from '../slide-eighteen/component';
@@ -24,7 +25,6 @@ import { SlideTwentyComponent } from '../slide-twenty/component';
 import { SlideTwoComponent } from '../slide-two/component';
 import { SlidesComponent } from '../slides/component';
 import { AppComponent } from './component';
-import { appRoutes } from './routes';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -63,7 +63,7 @@ import { RouterModule } from '@angular/router';
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(routes)
     ]
 })
 export class AppModule {}

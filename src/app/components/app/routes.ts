@@ -1,8 +1,7 @@
 import { SlidesComponent } from '../slides/component';
 import { slidesRoutes } from '../slides/routes';
-import { RouterConfig } from '@angular/router';
 
-export const appRoutes: RouterConfig = [
+export const appRoutes = [
     {
         children: [ ...slidesRoutes ],
         component: SlidesComponent,

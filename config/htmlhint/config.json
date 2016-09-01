@@ -1,5 +1,5 @@
 {
-    "attr-lowercase": [ "formControlName", "[formGroup]", "*ngIf", "[routerLink]", "viewBox" ],
+    "attr-lowercase": [ "formControlName", "[formGroup]", "[ngClass]", "*ngFor", "*ngIf", "[routerLink]", "viewBox" ],
     "attr-no-duplication": true,
     "attr-unsafe-chars": true,
     "attr-value-double-quotes": true,

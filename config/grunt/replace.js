@@ -1,11 +1,15 @@
 'use strict';
 
 var fs = require('fs'),
+    lusca = require('lusca'),
     path = require('path');
+
+const cspDevelopmentConfig = require('../csp/development');
+const cspProductionConfig = require('../csp/production');
 
 module.exports = (grunt) => {
     return {
-        assets: {
+        'assets': {
             files: {
                 './': [
                     'build/app/components/**/*.js'
@@ -30,7 +34,7 @@ module.exports = (grunt) => {
                 } ]
             }
         },
-        bundle: {
+        'bundle': {
             files: {
                 'build/app/bundle.js': [
                     'build/app/bundle.js'
@@ -43,7 +47,41 @@ module.exports = (grunt) => {
                 } ]
             }
         },
-        index: {
+        'csp-development': {
+            files: {
+                'build/index.html': [
+                    'build/index.html'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /<meta\shttp-equiv="content-security-policy">/,
+                    replacement: () => {
+                        const cspConfig = lusca.csp.createPolicyString(cspDevelopmentConfig);
+
+                        return `<meta content="${ cspConfig }" http-equiv="content-security-policy">`;
+                    }
+                } ]
+            }
+        },
+        'csp-production': {
+            files: {
+                'build/index.html': [
+                    'build/index.html'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /<meta\shttp-equiv="content-security-policy">/,
+                    replacement: () => {
+                        const cspConfig = lusca.csp.createPolicyString(cspProductionConfig);
+
+                        return `<meta content="${ cspConfig }" http-equiv="content-security-policy">`;
+                    }
+                } ]
+            }
+        },
+        'index': {
             files: {
                 'build/index.html': [
                     'build/index.html'
@@ -68,7 +106,7 @@ module.exports = (grunt) => {
                 } ]
             }
         },
-        links: {
+        'links': {
             files: {
                 './': [
                     'build/app/components/**/*.js'
@@ -92,7 +130,7 @@ module.exports = (grunt) => {
                 } ]
             }
         },
-        systemjs: {
+        'systemjs': {
             files: [ {
                 cwd: 'build/scripts/',
                 dest: 'build/scripts/',

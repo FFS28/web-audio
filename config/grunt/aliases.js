@@ -33,6 +33,7 @@ module.exports = {
     ],
     'deploy': [
         'build:production',
+        'replace:csp-production',
         'gh-pages:deploy'
     ],
     'deploy-on-version-updates': [
@@ -46,11 +47,13 @@ module.exports = {
     ],
     'monitor': [
         'build:development',
+        'replace:csp-development',
         'connect:monitor',
         'watch:monitor'
     ],
     'preview': [
         'build:production',
+        'replace:csp-development',
         'connect:preview',
         'watch:preview'
     ],

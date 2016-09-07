@@ -43,7 +43,8 @@ module.exports = {
         'eslint',
         'htmlhint',
         'postcss:lint',
-        'tslint'
+        'tslint',
+        'depcheck'
     ],
     'monitor': [
         'build:development',

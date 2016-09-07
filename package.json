@@ -36,6 +36,7 @@
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csso": "^2.0.1",
+    "grunt-depcheck": "^0.1.1",
     "grunt-gh-pages": "^2.0.0",
     "grunt-githooks": "^0.6.0",
     "grunt-htmlhint": "^0.9.13",

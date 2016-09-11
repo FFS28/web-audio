@@ -1,6 +1,6 @@
-import { Routes } from '@angular/router';
 import { SlidesComponent } from '../slides/component';
 import { slidesRoutes } from '../slides/routes';
+import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
     {

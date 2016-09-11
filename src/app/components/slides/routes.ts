@@ -1,4 +1,3 @@
-import { Routes } from '@angular/router';
 import { SlideEightComponent } from '../slide-eight/component';
 import { SlideEighteenComponent } from '../slide-eighteen/component';
 import { SlideElevenComponent } from '../slide-eleven/component';
@@ -22,6 +21,7 @@ import { SlideTwentyThreeComponent } from '../slide-twenty-three/component';
 import { SlideTwentyTwoComponent } from '../slide-twenty-two/component';
 import { SlideTwentyComponent } from '../slide-twenty/component';
 import { SlideTwoComponent } from '../slide-two/component';
+import { Routes } from '@angular/router';
 
 const SLIDES = [
     SlideOneComponent,

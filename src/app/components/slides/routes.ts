@@ -1,3 +1,4 @@
+import { Routes } from '@angular/router';
 import { SlideEightComponent } from '../slide-eight/component';
 import { SlideEighteenComponent } from '../slide-eighteen/component';
 import { SlideElevenComponent } from '../slide-eleven/component';
@@ -48,14 +49,14 @@ const SLIDES = [
     SlideTwentyThreeComponent
 ];
 
-const slideComponentsRoutes = SLIDES.map((slide, index) => {
+const slideComponentsRoutes: Routes = SLIDES.map((slide, index) => {
     return {
         component: slide,
         path: `${ index + 1 }`
     };
 });
 
-export const slidesRoutes = [ ...slideComponentsRoutes, {
+export const slidesRoutes: Routes = [ ...slideComponentsRoutes, {
     path: '**',
     redirectTo: '1'
 } ];

@@ -12,7 +12,7 @@ module.exports = (grunt) => {
         'assets': {
             files: {
                 './': [
-                    'build/app/components/**/*.js'
+                    'build/app/modules/**/components/**/*.js'
                 ]
             },
             options: {
@@ -109,7 +109,7 @@ module.exports = (grunt) => {
         'links': {
             files: {
                 './': [
-                    'build/app/components/**/*.js'
+                    'build/app/modules/**/components/**/*.js'
                 ]
             },
             options: {

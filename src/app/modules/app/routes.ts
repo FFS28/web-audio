@@ -1,4 +1,4 @@
-import { SlidesComponent } from '../slides/component';
+import { SlidesComponent } from '../slides/components/slides/component';
 import { slidesRoutes } from '../slides/routes';
 import { Routes } from '@angular/router';
 

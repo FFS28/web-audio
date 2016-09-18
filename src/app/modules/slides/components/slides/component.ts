@@ -1,4 +1,4 @@
-import { slidesRoutes } from './routes';
+import { slidesRoutes } from '../../routes';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 

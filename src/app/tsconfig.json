@@ -13,6 +13,7 @@
     "removeComments": false,
     "rootDir": "../",
     "sourceMap": true,
+    "strictNullChecks": true,
     "target": "es5"
   }
 }

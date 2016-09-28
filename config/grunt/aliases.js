@@ -1,6 +1,12 @@
 'use strict';
 
 module.exports = {
+    'a11y': [
+        'build:production',
+        'replace:csp-development',
+        'connect:a11y',
+        'axe-webdriver'
+    ],
     'build:development': [
         'clean:all',
         'copy:common',
@@ -61,6 +67,7 @@ module.exports = {
     'test': [
         'clean:all',
         'ts:test',
-        'karma:test'
+        'karma:test',
+        'a11y'
     ]
 };

@@ -3,6 +3,6 @@
     "default-src": "'none'",
     "font-src": "https://fonts.gstatic.com",
     "img-src": "'self'",
-    "script-src": "http://localhost:35729 'self' 'sha256-N+012tFwvjNmc/ebe68rIaSAUEwZ99bKTP26Yxr66K4=' 'unsafe-eval'",
+    "script-src": "http://localhost:35729 'self' 'unsafe-eval' 'unsafe-inline'",
     "style-src": "https://fonts.googleapis.com 'self' 'unsafe-inline'"
 }

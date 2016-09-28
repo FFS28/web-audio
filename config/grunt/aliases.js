@@ -67,7 +67,6 @@ module.exports = {
     'test': [
         'clean:all',
         'ts:test',
-        'karma:test',
-        'a11y'
+        'karma:test'
     ]
 };

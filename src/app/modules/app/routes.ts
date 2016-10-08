@@ -8,7 +8,8 @@ export const appRoutes: Routes = [
         component: SlidesComponent,
         path: 'slides'
     }, {
-        path: '**',
-        redirectTo: 'slides/1'
+        path: '',
+        pathMatch: 'prefix',
+        redirectTo: 'slides'
     }
 ];

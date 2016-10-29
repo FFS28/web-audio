@@ -71,5 +71,5 @@
     "pree2e": "webdriver-manager update",
     "test": "grunt lint && grunt test"
   },
-  "version": "0.3.15"
+  "version": "0.3.16"
 }

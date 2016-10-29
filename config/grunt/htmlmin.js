@@ -3,7 +3,7 @@
 module.exports = {
     default: {
         files: [ {
-            cwd: 'src/',
+            cwd: 'build/',
             dest: 'build/',
             expand: true,
             src: [ '**/*.html' ]

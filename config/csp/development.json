@@ -1,8 +1,0 @@
-{
-    "connect-src": "ws://localhost:35729 'self'",
-    "default-src": "'none'",
-    "font-src": "https://fonts.gstatic.com",
-    "img-src": "'self'",
-    "script-src": "http://localhost:35729 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src": "https://fonts.googleapis.com 'self' 'unsafe-inline'"
-}

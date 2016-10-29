@@ -1,13 +1,11 @@
 'use strict';
 
 module.exports = {
-    all: [
-        'build/*'
+    inline: [
+        'build/inline.js'
     ],
-    temporary: [
-        'build/app/*',
-        'build/.baseDir.js',
-        'build/.baseDir.js.map',
-        '!build/app/bundle.js'
+    scripts: [
+        'build/*.bundle.js',
+        'build/*.bundle.js.gz'
     ]
 };

@@ -2,48 +2,27 @@
 
 module.exports = {
     'a11y': [
-        'build:production',
-        'replace:csp-development',
-        'connect:a11y',
         'axe-webdriver'
     ],
-    'build:development': [
-        'clean:all',
-        'copy:common',
-        'copy:monitor',
-        'concat:monitor',
-        'ts:app',
-        'replace:links'
-    ],
-    'build:production': [
-        'clean:all',
-        'copy:common',
-        'copy:preview',
-        'concat:preview',
-        'csso',
-        'htmlmin',
-        'ts:app',
-        'replace:assets',
-        'systemjs',
-        'replace:bundle',
-        'clean:temporary',
-        'rev',
-        'replace:index',
-        'replace:systemjs'
-    ],
     'continuous': [
-        'clean:all',
-        'ts:test',
-        'karma:continuous',
-        'watch:continuous'
+        'sh:continuous'
     ],
     'deploy': [
-        'build:production',
+        'sh:build',
         'replace:csp-production',
+        'htmlmin',
+        'replace:inline',
+        'clean:inline',
+        'copy:scripts',
+        'replace:scripts',
+        'clean:scripts',
         'gh-pages:deploy'
     ],
     'deploy-on-version-updates': [
         'if:deploy'
+    ],
+    'e2e': [
+        'sh:e2e'
     ],
     'lint': [
         'eslint',
@@ -53,20 +32,12 @@ module.exports = {
         'depcheck'
     ],
     'monitor': [
-        'build:development',
-        'replace:csp-development',
-        'connect:monitor',
-        'watch:monitor'
+        'sh:monitor'
     ],
     'preview': [
-        'build:production',
-        'replace:csp-development',
-        'connect:preview',
-        'watch:preview'
+        'sh:preview'
     ],
     'test': [
-        'clean:all',
-        'ts:test',
-        'karma:test'
+        'sh:test'
     ]
 };

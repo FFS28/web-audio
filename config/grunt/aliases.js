@@ -10,6 +10,7 @@ module.exports = {
     'deploy': [
         'sh:build',
         'replace:csp-production',
+        'copy:404',
         'htmlmin',
         'replace:base-href',
         'replace:inline',

@@ -11,6 +11,7 @@ module.exports = {
         'sh:build',
         'replace:csp-production',
         'htmlmin',
+        'replace:base-href',
         'replace:inline',
         'clean:inline',
         'copy:scripts',

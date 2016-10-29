@@ -3,6 +3,6 @@
     "default-src": "'none'",
     "font-src": "https://fonts.gstatic.com",
     "img-src": "'self'",
-    "script-src": "'self' 'sha256-N+012tFwvjNmc/ebe68rIaSAUEwZ99bKTP26Yxr66K4=' 'unsafe-eval'",
+    "script-src": "'self' 'sha256-zY4zDMF3GptHloVSdjtc7+BrhK9jxKdtNIHw4wtGe2c=' 'sha256-N+012tFwvjNmc/ebe68rIaSAUEwZ99bKTP26Yxr66K4=' 'unsafe-eval'",
     "style-src": "https://fonts.googleapis.com 'self' 'unsafe-inline'"
 }

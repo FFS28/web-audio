@@ -62,6 +62,7 @@
   "license": "MIT",
   "main": "src/index.html",
   "name": "web-audio-conference-2016",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/chrisguttandin/web-audio-conference-2016.git"

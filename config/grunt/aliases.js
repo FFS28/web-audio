@@ -12,6 +12,7 @@ module.exports = {
         'copy:404',
         'htmlmin',
         'replace:base-href',
+        'replace:source-maps',
         'replace:inline',
         'replace:csp-production',
         'clean:inline',

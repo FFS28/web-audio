@@ -91,5 +91,18 @@ module.exports = {
                 }
             } ]
         }
+    },
+    'source-maps': {
+        files: {
+            './': [
+                'build/*.js'
+            ]
+        },
+        options: {
+            patterns: [ {
+                match: /[\n\r]+\/\/#\ssourceMappingURL=.*/gm,
+                replacement: ''
+            } ]
+        }
     }
 };

@@ -1,7 +1,8 @@
 'use strict';
 
-var fs = require('fs'),
-    lusca = require('lusca');
+const cspBuilder = require('content-security-policy-builder');
+const crypto = require('crypto');
+const fs = require('fs');
 
 const cspProductionConfig = require('../csp/production');
 
@@ -29,9 +30,34 @@ module.exports = {
             patterns: [ {
                 match: /<meta\shttp-equiv="content-security-policy">/,
                 replacement: () => {
-                    const cspConfig = lusca.csp.createPolicyString(cspProductionConfig);
+                    const html = fs.readFileSync('build/index.html', 'utf-8');
 
-                    return `<meta content="${ cspConfig }" http-equiv="content-security-policy">`;
+                    const regex = /<script[^>]*?>([^<](.|[\n\r])*?)<\/script>/gm;
+
+                    const scriptHashes = [];
+
+                    let result = regex.exec(html);
+
+                    while (result !== null) {
+                        scriptHashes.push(`sha256-${ crypto
+                            .createHash('sha256')
+                            .update(result[1])
+                            .digest('base64') }`);
+
+                        result = regex.exec(html);
+                    }
+
+                    const cspConfig = Object.assign({}, cspProductionConfig);
+
+                    cspConfig.directives = Object.assign({}, {
+                        'script-src': ('script-src' in cspConfig.directives)
+                            ? [ ...cspConfig.directives['script-src'], ...scriptHashes ]
+                            : [ ...scriptHashes ]
+                    });
+
+                    const cspString = cspBuilder(cspConfig);
+
+                    return `<meta content="${ cspString }" http-equiv="content-security-policy">`;
                 }
             } ]
         }

@@ -39,10 +39,10 @@ module.exports = {
                     let result = regex.exec(html);
 
                     while (result !== null) {
-                        scriptHashes.push(`sha256-${ crypto
+                        scriptHashes.push(`'sha256-${ crypto
                             .createHash('sha256')
                             .update(result[1])
-                            .digest('base64') }`);
+                            .digest('base64') }'`);
 
                         result = regex.exec(html);
                     }

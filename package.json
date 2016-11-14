@@ -18,7 +18,7 @@
   },
   "description": "My talk at the Web Audio Conference 2016.",
   "devDependencies": {
-    "@angular/compiler-cli": "~2.1.0",
+    "@angular/compiler-cli": "~2.2.0",
     "@types/jasmine": "^2.2.32",
     "@types/node": "^6.0.42",
     "@types/prismjs": "^1.4.17",

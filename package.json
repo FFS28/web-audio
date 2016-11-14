@@ -4,7 +4,7 @@
     "url": "https://github.com/chrisguttandin/web-audio-conference-2016/issues"
   },
   "dependencies": {
-    "@angular/common": "~2.1.0",
+    "@angular/common": "~2.2.0",
     "@angular/compiler": "~2.1.0",
     "@angular/core": "~2.1.0",
     "@angular/platform-browser": "~2.1.0",

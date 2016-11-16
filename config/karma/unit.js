@@ -23,6 +23,10 @@ module.exports = function (config) {
             'jasmine'
         ],
 
+        mime: {
+            'text/x-typescript': [ 'ts', 'tsx' ]
+        },
+
         plugins: [
             'angular-cli/plugins/karma',
             'karma-*'

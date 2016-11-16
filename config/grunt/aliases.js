@@ -19,6 +19,9 @@ module.exports = {
         'copy:scripts',
         'replace:scripts',
         'clean:scripts',
+        'copy:styles',
+        'replace:styles',
+        'clean:styles',
         'gh-pages:deploy'
     ],
     'deploy-on-version-updates': [

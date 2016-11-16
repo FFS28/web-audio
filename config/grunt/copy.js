@@ -20,5 +20,15 @@ module.exports = {
                 src: [ '**/*.js' ]
             }
         ]
+    },
+    styles: {
+        files: [
+            {
+                cwd: 'build/',
+                dest: 'build/styles/',
+                expand: true,
+                src: [ '**/*.css' ]
+            }
+        ]
     }
 };

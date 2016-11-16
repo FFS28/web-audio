@@ -95,6 +95,7 @@ module.exports = {
     'source-maps': {
         files: {
             './': [
+                'build/*.css',
                 'build/*.js'
             ]
         },
@@ -102,6 +103,24 @@ module.exports = {
             patterns: [ {
                 match: /[\n\r]+\/\/#\ssourceMappingURL=.*/gm,
                 replacement: ''
+            }, {
+                match: /[\n\r]+\/\*#\ssourceMappingURL=.*/gm,
+                replacement: ''
+            } ]
+        }
+    },
+    'styles': {
+        files: {
+            './': [
+                'build/index.html'
+            ]
+        },
+        options: {
+            patterns: [ {
+                match: /<link\shref="(styles\.[a-z0-9]*\.bundle\.css)"\srel="stylesheet">/g,
+                replacement: (match, filename) => {
+                    return `<link href="styles/${ filename }" rel="stylesheet">`;
+                }
             } ]
         }
     }

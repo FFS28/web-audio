@@ -70,9 +70,9 @@ module.exports = {
         },
         options: {
             patterns: [ {
-                match: /<script\stype="text\/javascript"\ssrc="inline.js"><\/script>/g,
-                replacement: () => {
-                    return `<script type="text/javascript">${ fs.readFileSync('build/inline.js') }</script>`;
+                match: /<script\stype="text\/javascript"\ssrc="(inline\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
+                replacement: (match, filename) => {
+                    return `<script type="text/javascript">${ fs.readFileSync(`build/${ filename }`) }</script>`;
                 }
             } ]
         }

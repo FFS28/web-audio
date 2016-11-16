@@ -2,7 +2,7 @@
 
 module.exports = {
     inline: [
-        'build/inline.js'
+        'build/inline.*.bundle.js'
     ],
     scripts: [
         'build/*.bundle.map',

@@ -53,7 +53,7 @@
     "protractor": "^4.0.10",
     "stylelint": "^7.5.0",
     "ts-node": "^1.6.0",
-    "tslint": "^3.15.1",
+    "tslint": "^4.0.0",
     "tslint-config-holy-grail": "^3.0.2",
     "typescript": "~2.0.10",
     "webdriver-manager": "^10.2.8"

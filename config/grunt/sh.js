@@ -2,7 +2,7 @@
 
 module.exports = {
     build: {
-        cmd: 'ng build --prod'
+        cmd: 'ng build --base-href /web-audio-conference-2016 --prod'
     },
     continuous: {
         cmd: 'ng test'

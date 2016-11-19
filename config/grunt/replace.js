@@ -7,19 +7,6 @@ const fs = require('fs');
 const cspProductionConfig = require('../csp/production');
 
 module.exports = {
-    'base-href': {
-        files: {
-            'build/index.html': [
-                'build/index.html'
-            ]
-        },
-        options: {
-            patterns: [ {
-                match: /<base\shref="\/">/,
-                replacement: '<base href="/web-audio-conference-2016">'
-            } ]
-        }
-    },
     'csp-production': {
         files: {
             'build/index.html': [

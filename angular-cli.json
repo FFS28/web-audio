@@ -50,7 +50,7 @@
     "packages": [],
     "project": {
         "name": "web-audio-conference-2016",
-        "version": "1.0.0-beta.20-4"
+        "version": "1.0.0-beta.21"
     },
     "test": {
         "karma": {

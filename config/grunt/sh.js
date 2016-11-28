@@ -2,7 +2,7 @@
 
 module.exports = {
     build: {
-        cmd: 'ng build --base-href /web-audio-conference-2016 --prod'
+        cmd: 'ng build --aot --base-href /web-audio-conference-2016 --prod'
     },
     continuous: {
         cmd: 'ng test'
@@ -14,7 +14,7 @@ module.exports = {
         cmd: 'ng serve --port 9955'
     },
     preview: {
-        cmd: 'ng serve --port 9955 --prod'
+        cmd: 'ng serve --aot --port 9955 --prod'
     },
     test: {
         cmd: 'ng test --watch false'

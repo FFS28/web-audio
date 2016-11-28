@@ -7,6 +7,19 @@ const fs = require('fs');
 const cspProductionConfig = require('../csp/production');
 
 module.exports = {
+    'chunks': {
+        files: {
+            './': [
+                'build/index.html'
+            ]
+        },
+        options: {
+            patterns: [ {
+                match: /""\+e\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
+                replacement: (match) => match.replace(/""\+e\+"/g, '"scripts/"+e+"')
+            } ]
+        }
+    },
     'csp-production': {
         files: {
             'build/index.html': [

@@ -13,6 +13,7 @@ module.exports = {
         'htmlmin',
         'replace:source-maps',
         'replace:inline',
+        'replace:chunks',
         'replace:csp-production',
         'clean:inline',
         'copy:scripts',

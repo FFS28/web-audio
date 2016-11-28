@@ -16,7 +16,7 @@ module.exports = {
         options: {
             patterns: [ {
                 match: /""\+e\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
-                replacement: (match) => match.replace(/""\+e\+"/g, '"scripts/"+e+"')
+                replacement: (match) => match.replace(/""\+e\+"/g, '"web-audio-conference-2016/scripts/"+e+"')
             } ]
         }
     },

@@ -22,7 +22,7 @@
     "@types/jasmine": "^2.2.32",
     "@types/node": "^6.0.42",
     "@types/prismjs": "^1.4.17",
-    "angular-cli": "1.0.0-beta.21",
+    "angular-cli": "1.0.0-beta.22-1",
     "babel-eslint": "^7.0.0",
     "content-security-policy-builder": "^1.1.0",
     "eslint-config-holy-grail": "^13.0.0",

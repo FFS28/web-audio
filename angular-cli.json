@@ -54,7 +54,7 @@
     },
     "test": {
         "karma": {
-            "config": "./config/karma/unit.js"
+            "config": "./config/karma/config.js"
         }
     }
 }

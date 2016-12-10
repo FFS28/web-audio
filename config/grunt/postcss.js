@@ -1,5 +1,3 @@
-'use strict';
-
 var stylelint = require('stylelint');
 
 module.exports = {

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     inline: [
         'build/inline.*.bundle.js'

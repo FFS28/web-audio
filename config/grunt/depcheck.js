@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     default: {
         options: {
@@ -10,7 +8,6 @@ module.exports = {
                 '@angular/compiler-cli',
                 '@types/*',
                 'angular-cli',
-                'babel-eslint',
                 'eslint-config-holy-grail',
                 'grunt-*',
                 'husky',

@@ -1,5 +1,3 @@
-'use strict';
-
 const cspBuilder = require('content-security-policy-builder');
 const crypto = require('crypto');
 const fs = require('fs');

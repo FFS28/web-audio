@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     'a11y': [
         'axe-webdriver'

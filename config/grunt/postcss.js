@@ -1,4 +1,4 @@
-var stylelint = require('stylelint');
+const stylelint = require('stylelint');
 
 module.exports = {
     lint: {

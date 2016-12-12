@@ -1,5 +1,3 @@
-'use strict';
-
 const cspBuilder = require('content-security-policy-builder');
 const crypto = require('crypto');
 const fs = require('fs');
@@ -7,16 +5,16 @@ const fs = require('fs');
 const cspProductionConfig = require('../csp/production');
 
 module.exports = {
-    'base-href': {
+    'chunks': {
         files: {
-            'build/index.html': [
+            './': [
                 'build/index.html'
             ]
         },
         options: {
             patterns: [ {
-                match: /<base\shref="\/">/,
-                replacement: '<base href="/web-audio-conference-2016">'
+                match: /""\+e\+"\."\+{([0-9]+:"[a-f0-9]{20}",?)+}/g,
+                replacement: (match) => match.replace(/""\+e\+"/g, '"web-audio-conference-2016/scripts/"+e+"')
             } ]
         }
     },
@@ -47,12 +45,14 @@ module.exports = {
                         result = regex.exec(html);
                     }
 
-                    const cspConfig = Object.assign({}, cspProductionConfig);
-
-                    cspConfig.directives = Object.assign({}, {
-                        'script-src': ('script-src' in cspConfig.directives)
-                            ? [ ...cspConfig.directives['script-src'], ...scriptHashes ]
-                            : [ ...scriptHashes ]
+                    const cspConfig = Object.assign({}, cspProductionConfig, {
+                        directives: Object.assign({}, cspProductionConfig.directives, {
+                            'script-src': ('script-src' in cspProductionConfig.directives)
+                                ? (Array.isArray(cspProductionConfig.directives['script-src']))
+                                    ? [ ...cspProductionConfig.directives['script-src'], ...scriptHashes ]
+                                    : [ cspProductionConfig.directives['script-src'], ...scriptHashes ]
+                                : [ ...scriptHashes ]
+                        })
                     });
 
                     const cspString = cspBuilder(cspConfig);

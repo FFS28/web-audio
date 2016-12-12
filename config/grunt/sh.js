@@ -6,7 +6,7 @@ module.exports = {
         cmd: 'ng test'
     },
     e2e: {
-        cmd: 'LC_NUMERIC="en_US.UTF-8" ng e2e'
+        cmd: 'ng e2e'
     },
     monitor: {
         cmd: 'ng serve --port 9955'

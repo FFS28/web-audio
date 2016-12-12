@@ -1,3 +1,5 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { PrismComponent } from './prism/prism.component';
 import { SlideEightComponent } from './slide-eight/slide-eight.component';
 import { SlideEighteenComponent } from './slide-eighteen/slide-eighteen.component';
@@ -24,8 +26,6 @@ import { SlideTwentyComponent } from './slide-twenty/slide-twenty.component';
 import { SlideTwoComponent } from './slide-two/slide-two.component';
 import { SlidesRoutingModule } from './slides-routing.module';
 import { SlidesComponent } from './slides.component';
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
 
 @NgModule({
     declarations: [

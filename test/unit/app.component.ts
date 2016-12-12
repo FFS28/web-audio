@@ -1,6 +1,6 @@
-import { AppComponent, AppModule } from '../../src/app';
 import { APP_BASE_HREF } from '@angular/common';
 import { TestBed, async } from '@angular/core/testing';
+import { AppComponent, AppModule } from '../../src/app';
 
 describe('AppComponent', () => {
 

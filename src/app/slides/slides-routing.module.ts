@@ -1,3 +1,5 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { SlideEightComponent } from './slide-eight/slide-eight.component';
 import { SlideEighteenComponent } from './slide-eighteen/slide-eighteen.component';
 import { SlideElevenComponent } from './slide-eleven/slide-eleven.component';
@@ -22,8 +24,6 @@ import { SlideTwentyTwoComponent } from './slide-twenty-two/slide-twenty-two.com
 import { SlideTwentyComponent } from './slide-twenty/slide-twenty.component';
 import { SlideTwoComponent } from './slide-two/slide-two.component';
 import { SlidesComponent } from './slides.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     {

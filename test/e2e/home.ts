@@ -1,6 +1,6 @@
 import { HomePage } from './home.po';
 
-describe('/', function() {
+describe('/', () => {
 
     let page: HomePage;
 

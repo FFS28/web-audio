@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     inline: [
         'build/inline.*.bundle.js'
@@ -7,7 +5,10 @@ module.exports = {
     scripts: [
         'build/*.bundle.map',
         'build/*.bundle.js',
-        'build/*.bundle.js.gz'
+        'build/*.bundle.js.gz',
+        'build/*.chunk.map',
+        'build/*.chunk.js',
+        'build/*.chunk.js.gz'
     ],
     styles: [
         'build/*.bundle.map',

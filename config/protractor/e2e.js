@@ -1,5 +1,3 @@
-'use strict';
-
 const SpecReporter = require('jasmine-spec-reporter');
 const tsNode = require('ts-node');
 

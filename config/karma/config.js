@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function (config) {
+module.exports = (config) => {
 
     config.set({
 
@@ -34,7 +32,18 @@ module.exports = function (config) {
 
         preprocessors: {
             './config/karma/test.ts': [ 'angular-cli' ]
-        }
+        },
+
+        remapIstanbulReporter: {
+            reports: {
+                html: 'coverage',
+                lcovonly: './coverage/coverage.lcov'
+            }
+        },
+
+        reporters: config.angularCli && config.angularCli.codeCoverage
+            ? ['progress', 'karma-remap-istanbul']
+            : ['progress']
 
     });
 

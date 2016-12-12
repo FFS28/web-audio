@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     'a11y': [
         'axe-webdriver'
@@ -11,9 +9,9 @@ module.exports = {
         'sh:build',
         'copy:404',
         'htmlmin',
-        'replace:base-href',
         'replace:source-maps',
         'replace:inline',
+        'replace:chunks',
         'replace:csp-production',
         'clean:inline',
         'copy:scripts',

@@ -1,6 +1,6 @@
 module.exports = {
     build: {
-        cmd: 'ng build --aot --base-href /web-audio-conference-2016 --prod'
+        cmd: 'ng build --aot --base-href /web-audio-conference-2016 --no-sourcemap --prod'
     },
     continuous: {
         cmd: 'ng test'

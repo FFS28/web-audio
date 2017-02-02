@@ -13,6 +13,7 @@
             "main": "main.ts",
             "mobile": false,
             "outDir": "build",
+            "polyfills": "polyfills.ts",
             "prefix": "wac",
             "root": "src",
             "scripts": [
@@ -28,6 +29,7 @@
         }
     ],
     "defaults": {
+        "changeDetection": "OnPush",
         "inline": {
             "style": false,
             "template": false
@@ -50,7 +52,7 @@
     },
     "project": {
         "name": "web-audio-conference-2016",
-        "version": "1.0.0-beta.26"
+        "version": "1.0.0-beta.28.3"
     },
     "test": {
         "karma": {

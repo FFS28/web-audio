@@ -5,15 +5,14 @@ module.exports = {
             ignoreMatches: [
                 'hammerjs',
                 'prismjs',
+                '@angular/cli',
                 '@angular/compiler-cli',
                 '@types/*',
-                'angular-cli',
                 'eslint-config-holy-grail',
                 'grunt-*',
                 'husky',
                 'jasmine',
                 'karma*',
-                'tslint',
                 'tslint-config-holy-grail',
                 'typescript'
             ]

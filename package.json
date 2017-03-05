@@ -24,7 +24,7 @@
     "@types/node": "~6.0.60",
     "@types/prismjs": "^1.4.17",
     "content-security-policy-builder": "^1.1.0",
-    "eslint-config-holy-grail": "^15.0.0",
+    "eslint-config-holy-grail": "^16.0.0",
     "grunt": "^1.0.1",
     "grunt-axe-webdriver": "0.0.2",
     "grunt-cli": "^1.2.0",

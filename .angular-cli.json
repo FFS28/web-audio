@@ -16,8 +16,7 @@
             "prefix": "wac",
             "root": "src",
             "scripts": [
-                "../node_modules/hammerjs/hammer.js",
-                "../node_modules/prismjs/prism.js"
+                "../node_modules/hammerjs/hammer.js"
             ],
             "styles": [
                 "../node_modules/prismjs/themes/prism-okaidia.css",

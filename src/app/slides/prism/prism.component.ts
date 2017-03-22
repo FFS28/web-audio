@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import * as Prism from 'prismjs';
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

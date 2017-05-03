@@ -57,7 +57,7 @@
     "typescript": "~2.2.0",
     "webpack-bundle-analyzer": "^2.3.1"
   },
-  "homepage": "http://chrisguttandin.github.io/web-audio-conference-2016",
+  "homepage": "https://chrisguttandin.github.io/web-audio-conference-2016",
   "license": "MIT",
   "main": "src/index.html",
   "name": "web-audio-conference-2016",

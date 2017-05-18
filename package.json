@@ -18,7 +18,7 @@
   },
   "description": "My talk at the Web Audio Conference 2016.",
   "devDependencies": {
-    "@angular/cli": "1.0.2",
+    "@angular/cli": "1.0.4",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
@@ -53,7 +53,7 @@
     "protractor": "~5.1.0",
     "stylelint": "^7.5.0",
     "ts-node": "~2.0.0",
-    "tslint-config-holy-grail": "~6.0.0",
+    "tslint-config-holy-grail": "~8.0.0",
     "typescript": "~2.2.0",
     "webpack-bundle-analyzer": "^2.3.1"
   },

@@ -21,18 +21,6 @@ export class SlidesComponent implements OnDestroy, OnInit {
         this._router = router;
     }
 
-    private _goToNextSlide () {
-        if (this._index < 23) {
-            this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
-        }
-    }
-
-    private _goToPreviousSlide () {
-        if (this._index > 1) {
-            this._router.navigate([ `${ this._index - 1 }` ], { relativeTo: this._activatedRoute });
-        }
-    }
-
     public handleKeyUp (event) {
         if ((event.code && event.code === 'ArrowLeft') || event.keyCode === 37) {
             this._goToPreviousSlide();
@@ -60,6 +48,18 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
                 this._index = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             });
+    }
+
+    private _goToNextSlide () {
+        if (this._index < 23) {
+            this._router.navigate([ `${ this._index + 1 }` ], { relativeTo: this._activatedRoute });
+        }
+    }
+
+    private _goToPreviousSlide () {
+        if (this._index > 1) {
+            this._router.navigate([ `${ this._index - 1 }` ], { relativeTo: this._activatedRoute });
+        }
     }
 
 }

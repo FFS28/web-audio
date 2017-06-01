@@ -10,6 +10,7 @@ module.exports = {
                 'prismjs',
                 '@angular/cli',
                 '@angular/compiler-cli',
+                '@angular/language-service',
                 '@types/*',
                 'eslint-config-holy-grail',
                 'grunt-*',

@@ -24,6 +24,7 @@
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
     "@types/prismjs": "^1.4.17",
+    "chromedriver": "^2.30.1",
     "content-security-policy-builder": "^1.1.0",
     "eslint-config-holy-grail": "^17.0.0",
     "greenkeeper-lockfile": "^1.5.0",

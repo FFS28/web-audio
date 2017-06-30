@@ -1,5 +1,7 @@
 import { browser, by, element } from 'protractor';
 
+const IS_SMOKE_TEST = !!process.env.IS_SMOKE_TEST;
+
 export class HomePage {
 
     public getHeadline() {
@@ -11,7 +13,7 @@ export class HomePage {
     }
 
     public navigateTo() {
-        return browser.get('/');
+        return browser.get((IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io/web-audio-conference-2016' : '/');
     }
 
 }

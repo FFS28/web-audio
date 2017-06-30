@@ -1,7 +1,6 @@
 addons:
   chrome: stable
 after_script: greenkeeper-lockfile-upload
-after_success: grunt deploy-on-version-updates
 before_install: npm install npm@latest --global
 before_script:
   - greenkeeper-lockfile-update
@@ -18,4 +17,7 @@ env:
   - secure: G8fWK76UK3OJyk3SeVQH/IN3M/zLlUC3QS2VTktlHG5N1dzGxbMGbRiQ+dYBOvLP/O9G6c7/gDHsf8CTmwQURcpBvyb99XKJ9CkYOB5VP2UJ3OiC2Fe+j0TD1sfunatTFzildhRn8uPB9oumBqah37pnxCuM6eOhKzBSLU9eZRB5IazyueGp3hIF9Fds2KKWnsWLBaxe7i1shE81pURNVNqCzdO2oKVQ+wMPzNATgo743MO05tEIc6lzaqu7jDNUcfWZM+LUakIHnHlvDm933ZOrDWJh5pcOCA5zsnFblmgjIrDcEuE/zPbWXSfoSDIj79j9Kpcv7Q33ZOVCGt3hTvjjVsOl7TkJpa87gNQtQyPriNGyYwbl9LW1Zuf7e0jYrVMkX1Xmjx2XIwg/HmKhR4sWfCCybEZwSdFw9v9ozXhlQ/BiJmDQ7RNYXcZAs7+YXZFdsARSB4B6M25cG766ys0hpKNKGh9sfhkmY93oK4/pFCCabWPZzShTfFSXNpxQ91A+E1R658J8KxVmur9nbSA2Fs7ywiDSY+IjGwdAtDvNkFREfpGZ4F5FMVl0zpjn3aX1pTd2F5TWVfvs4jXJL6bEdf+0/BhR7NHJ+uBeg+wVrMYjSvmOVpbv3SnJubJCE4bE85Jkb8RBeVFKDODPRO4xiORiswj0dxacFpxkcpU=
 language: node_js
 node_js: 8
+script:
+  - npm test
+  - grunt deploy-on-version-updates
 sudo: false

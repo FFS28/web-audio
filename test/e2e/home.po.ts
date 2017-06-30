@@ -6,6 +6,10 @@ export class HomePage {
         return element(by.css('wac-app h1')).getText();
     }
 
+    public getSubHeadline() {
+        return element(by.css('wac-app h2')).getText();
+    }
+
     public navigateTo() {
         return browser.get('/');
     }

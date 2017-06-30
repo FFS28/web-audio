@@ -1,3 +1,5 @@
+addons:
+  chrome: stable
 after_script: greenkeeper-lockfile-upload
 after_success: grunt deploy-on-version-updates
 before_install: npm install npm@latest --global

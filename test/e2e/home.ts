@@ -10,7 +10,7 @@ describe('/', () => {
 
     it('should display the correct headline', () => {
         page.navigateTo();
-        expect(page.getHeadline()).toEqual('Non Audio Signal Processing');
+        expect<any>(page.getHeadline()).toEqual('Non Audio Signal Processing');
     });
 
 });

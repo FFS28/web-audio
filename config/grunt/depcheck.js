@@ -13,6 +13,7 @@ module.exports = {
                 '@angular/language-service',
                 '@types/*',
                 'axe-core',
+                'bundle-buddy',
                 'chromedriver',
                 'eslint-config-holy-grail',
                 'greenkeeper-lockfile',

@@ -1,9 +1,9 @@
 module.exports = {
     analyze: {
-        cmd: 'webpack-bundle-analyzer build/stats.json'
+        cmd: 'ng build --aot --prod --sourcemaps --stats-json && (bundle-buddy build/*.map || webpack-bundle-analyzer build/stats.json)'
     },
     build: {
-        cmd: 'ng build --aot --base-href /web-audio-conference-2016 --no-sourcemap --prod --stats-json'
+        cmd: 'ng build --aot --base-href /web-audio-conference-2016 --no-sourcemap --prod'
     },
     continuous: {
         cmd: 'ng test'

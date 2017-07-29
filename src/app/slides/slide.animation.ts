@@ -1,20 +1,36 @@
 import { animate, animation, group, query, style } from '@angular/animations';
 
-const TRANSITION_STYLES = {
-    position: 'fixed',
-    top: 0,
-    width: 'calc(100% - 8vmin)'
-};
+// @todo For some reason the objects which define the styles can't be composed when using AoT.
 
 export const slideAnimation = animation([
     group([
         query(':enter', [
-            style({ transform: '{{ enterTransform }}', ...TRANSITION_STYLES }),
-            animate('0.5s ease-in-out', style({ transform: 'translateX(0%)', ...TRANSITION_STYLES }))
+            style({
+                position: 'fixed',
+                top: 0,
+                transform: '{{ enterTransform }}',
+                width: 'calc(100% - 8vmin)'
+            }),
+            animate('0.5s ease-in-out', style({
+                position: 'fixed',
+                top: 0,
+                transform: 'translateX(0%)',
+                width: 'calc(100% - 8vmin)'
+            }))
         ], { optional: true }),
         query(':leave', [
-            style({ transform: 'translateX(0%)', ...TRANSITION_STYLES }),
-            animate('0.5s ease-in-out', style({ transform: '{{ leaveTransform }}', ...TRANSITION_STYLES }))
+            style({
+                position: 'fixed',
+                top: 0,
+                transform: 'translateX(0%)',
+                width: 'calc(100% - 8vmin)'
+            }),
+            animate('0.5s ease-in-out', style({
+                position: 'fixed',
+                top: 0,
+                transform: '{{ leaveTransform }}',
+                width: 'calc(100% - 8vmin)'
+            }))
         ], { optional: true })
     ])
 ]);

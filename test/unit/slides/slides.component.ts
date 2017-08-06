@@ -3,11 +3,11 @@ import { SlidesComponent } from '../../../src/app/slides';
 
 describe('SlidesComponent', () => {
 
-    let activatedRoute;
+    let activatedRoute: any;
 
-    let router;
+    let router: any;
 
-    let slidesComponent;
+    let slidesComponent: SlidesComponent;
 
     beforeEach(() => {
         activatedRoute = {
@@ -27,7 +27,7 @@ describe('SlidesComponent', () => {
 
         spyOn(router, 'navigate').and.callThrough();
 
-        slidesComponent = new SlidesComponent(<any> activatedRoute, <any> router);
+        slidesComponent = new SlidesComponent(activatedRoute, router);
     });
 
     describe('handleKeyUp()', () => {
@@ -37,25 +37,31 @@ describe('SlidesComponent', () => {
         });
 
         it('should navigate to the previous slide', () => {
-            slidesComponent.handleKeyUp({ code: 'ArrowLeft' });
+            const keyboardEvent = new KeyboardEvent('keyup', { code: 'ArrowLeft' });
+
+            slidesComponent.handleKeyUp(keyboardEvent);
 
             expect(router.navigate).toHaveBeenCalledWith([ '7' ], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the previous slide', () => {
-            slidesComponent.handleKeyUp({ keyCode: 37 });
+            // @todo Constructing a real KeyboardEvent with a given keyCode seems to be impossible.
+            slidesComponent.handleKeyUp(<KeyboardEvent> { keyCode: 37 });
 
             expect(router.navigate).toHaveBeenCalledWith([ '7' ], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the next slide', () => {
-            slidesComponent.handleKeyUp({ code: 'ArrowRight' });
+            const keyboardEvent = new KeyboardEvent('keyup', { code: 'ArrowRight' });
+
+            slidesComponent.handleKeyUp(keyboardEvent);
 
             expect(router.navigate).toHaveBeenCalledWith([ '9' ], { relativeTo: activatedRoute });
         });
 
         it('should navigate to the next slide', () => {
-            slidesComponent.handleKeyUp({ keyCode: 39 });
+            // @todo Constructing a real KeyboardEvent with a given keyCode seems to be impossible.
+            slidesComponent.handleKeyUp(<KeyboardEvent> { keyCode: 39 });
 
             expect(router.navigate).toHaveBeenCalledWith([ '9' ], { relativeTo: activatedRoute });
         });

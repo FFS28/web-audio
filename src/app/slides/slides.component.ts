@@ -33,7 +33,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
         this._router = router;
     }
 
-    public handleKeyUp (event) {
+    public handleKeyUp (event: KeyboardEvent) {
         if ((event.code && event.code === 'ArrowLeft') || event.keyCode === 37) {
             this._goToPreviousSlide();
         } else if ((event.code && event.code === 'ArrowRight') || event.keyCode === 39) {
@@ -75,17 +75,20 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     private _setIndexAndTransition () {
         const activatedChildRoute = this._activatedRoute.firstChild;
-        const newIndex = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
-        const direction = (newIndex > this._index) ? 'forwards' : 'backwards';
 
-        this._index = newIndex;
-        this.transition = {
-            params: {
-                enterTransform: (direction === 'forwards') ? 'translateX(100%)' : 'translateX(-100%)',
-                leaveTransform: (direction === 'forwards') ? 'translateX(-100%)' : 'translateX(100%)'
-            },
-            value: newIndex
-        };
+        if (activatedChildRoute !== null) {
+            const newIndex = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
+            const direction = (newIndex > this._index) ? 'forwards' : 'backwards';
+
+            this._index = newIndex;
+            this.transition = {
+                params: {
+                    enterTransform: (direction === 'forwards') ? 'translateX(100%)' : 'translateX(-100%)',
+                    leaveTransform: (direction === 'forwards') ? 'translateX(-100%)' : 'translateX(100%)'
+                },
+                value: newIndex
+            };
+        }
     }
 
 }

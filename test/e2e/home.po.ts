@@ -4,15 +4,15 @@ const IS_SMOKE_TEST = !!process.env.IS_SMOKE_TEST;
 
 export class HomePage {
 
-    public getHeadline() {
+    public getHeadline () {
         return element(by.css('wac-app h1')).getText();
     }
 
-    public getSubHeadline() {
+    public getSubHeadline () {
         return element(by.css('wac-app h2')).getText();
     }
 
-    public navigateTo() {
+    public navigateTo () {
         return browser.get((IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io/web-audio-conference-2016' : '/');
     }
 

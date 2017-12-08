@@ -71,15 +71,6 @@ module.exports = (grunt) => {
                     replacement: (match, filename) => {
                         return `<script type="text/javascript">${ fs.readFileSync(`build/${ filename }`) }</script>`;
                     }
-                }, {
-                    match: /<script\stype="text\/javascript"\ssrc="(sw-register\.[a-z0-9]*\.bundle\.js)"><\/script>/g,
-                    replacement: (match, filename) => {
-                        const content = fs
-                            .readFileSync(`build/${ filename }`, { encoding: 'utf8' })
-                            .replace(/register\("worker-basic\.min\.js"\)/, 'register("web-audio-conference-2016/worker-basic.min.js")');
-
-                        return `<script type="text/javascript">${ content }</script>`;
-                    }
                 } ]
             }
         },
@@ -104,9 +95,6 @@ module.exports = (grunt) => {
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
                     match: /[\s]*"\/web-audio-conference-2016(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
-                    replacement: ''
-                }, {
-                    match: /[\s]*"\/web-audio-conference-2016(\/scripts)?\/sw-register\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
                     replacement: ''
                 } ]
             }

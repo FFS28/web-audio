@@ -5,6 +5,19 @@ const fs = require('fs');
 
 module.exports = (grunt) => {
     return {
+        'bundle': {
+            files: {
+                './': [
+                    'build/main.28e04148b45d821bc3b6.bundle.js'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /"\/ngsw-worker\.js"/g,
+                    replacement: 'web-audio-conference-2016/ngsw-worker.js'
+                } ]
+            }
+        },
         'chunks': {
             files: {
                 './': [
@@ -77,7 +90,7 @@ module.exports = (grunt) => {
         'manifest': {
             files: {
                 './': [
-                    'build/ngsw-manifest.json'
+                    'build/ngsw.json'
                 ]
             },
             options: {

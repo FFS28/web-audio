@@ -14,7 +14,7 @@ module.exports = (grunt) => {
             options: {
                 patterns: [ {
                     match: /"\/ngsw-worker\.js"/g,
-                    replacement: 'web-audio-conference-2016/ngsw-worker.js'
+                    replacement: '"/web-audio-conference-2016/ngsw-worker.js"'
                 } ]
             }
         },

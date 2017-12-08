@@ -8,7 +8,7 @@ module.exports = (grunt) => {
         'bundle': {
             files: {
                 './': [
-                    'build/main.28e04148b45d821bc3b6.bundle.js'
+                    'build/main.*.bundle.js'
                 ]
             },
             options: {
@@ -95,8 +95,8 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /assets\/(apple-touch-icon-[1-9][0-9]{1,2}\.png)/g,
-                    replacement: (_, filename) => grunt.file.expand({ cwd: 'build' }, `assets/*.${ filename }`)[0]
+                    match: /assets\/apple-touch-icon\.png/g,
+                    replacement: () => grunt.file.expand({ cwd: 'build' }, 'assets/*.apple-touch-icon.png')[0]
                 }, {
                     match: /assets\/favicon\.ico/g,
                     replacement: () => grunt.file.expand({ cwd: 'build' }, 'assets/*.favicon.ico')[0]

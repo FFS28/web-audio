@@ -107,6 +107,9 @@ module.exports = (grunt) => {
                     match: /\/([a-z0-9-]+\.[a-z0-9]*\.(bundle|chunk)\.js)"/g,
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
+                    match: /[\s]*"\/web-audio-conference-2016(\/scripts)?\/inline\.[a-z0-9]+.bundle.js",/g,
+                    replacement: ''
+                }, {
                     match: /[\s]*"\/web-audio-conference-2016(\/scripts)?\/inline\.[a-z0-9]+.bundle.js":\s"[a-z0-9]+",/g,
                     replacement: ''
                 } ]

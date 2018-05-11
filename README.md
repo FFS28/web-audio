@@ -1,5 +1,7 @@
 # web-audio-conference-2016
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisguttandin/web-audio-conference-2016.svg)](https://greenkeeper.io/)
+
 **My talk at the Web Audio Conference 2016.**
 
 [![tests](https://img.shields.io/travis/chrisguttandin/web-audio-conference-2016/master.svg?style=flat-square)](https://travis-ci.org/chrisguttandin/web-audio-conference-2016)

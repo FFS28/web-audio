@@ -30,6 +30,7 @@
     "@angular/cli": "~6.1.1",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
+    "@angular/platform-server": "^6.1.0",
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-angular": "^7.0.1",
     "@sonarwhal/formatter-stylish": "^2.0.4",

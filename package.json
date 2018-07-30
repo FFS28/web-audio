@@ -34,6 +34,7 @@
     "@angular/platform-server": "^6.1.0",
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-angular": "^7.0.1",
+    "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "@sonarwhal/formatter-stylish": "^2.0.4",
     "@sonarwhal/parser-javascript": "^3.2.0",
     "@sonarwhal/parser-manifest": "^1.0.2",

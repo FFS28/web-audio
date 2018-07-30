@@ -29,6 +29,7 @@
     "@angular-devkit/build-angular": "~0.7.1",
     "@angular/cli": "~6.1.1",
     "@angular/compiler-cli": "^6.1.0",
+    "@angular/http": "^6.1.0",
     "@angular/language-service": "^6.1.0",
     "@angular/platform-server": "^6.1.0",
     "@commitlint/cli": "^7.0.0",

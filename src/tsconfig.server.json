@@ -1,0 +1,16 @@
+{
+  "angularCompilerOptions": {
+    "entryModule": "app/app.server.module#AppServerModule",
+    "fullTemplateTypeCheck": true
+  },
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": false,
+    "module": "commonjs",
+    "noUnusedParameters": false,
+    "outDir": "../out-tsc/app",
+    "skipLibCheck": true,
+    "target": "es5"
+  },
+  "extends": "../node_modules/tsconfig-holy-grail/src/tsconfig-browser"
+}

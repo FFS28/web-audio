@@ -10,6 +10,7 @@ module.exports = {
             caseSensitive: true,
             collapseBooleanAttributes: true,
             collapseWhitespace: true,
+            minifyCSS: true,
             removeComments: true
         }
     }

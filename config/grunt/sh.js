@@ -21,6 +21,9 @@ module.exports = {
     monitor: {
         cmd: 'ng serve --aot --port 9955'
     },
+    prerender: {
+        cmd: 'ng run web-audio-conference-2016:server && angular-prerender'
+    },
     preview: {
         cmd: 'ng serve --aot --build-optimizer --port 9955 --prod'
     },

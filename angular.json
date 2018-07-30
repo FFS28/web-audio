@@ -80,6 +80,14 @@
                         "browserTarget": "web-audio-conference-2016:build"
                     }
                 },
+                "server": {
+                    "builder": "@angular-devkit/build-angular:server",
+                    "options": {
+                        "outputPath": "build/web-audio-conference-2016-server",
+                        "main": "src/main.server.ts",
+                        "tsConfig": "src/tsconfig.server.json"
+                    }
+                },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {

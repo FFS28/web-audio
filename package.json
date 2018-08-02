@@ -70,7 +70,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~8.9.5",
     "@types/prismjs": "^1.9.0",
-    "angular-prerender": "^1.0.2",
+    "angular-prerender": "^1.0.3",
     "axe-core": "^3.0.3",
     "bundle-buddy": "^0.2.1",
     "commitizen": "^2.10.1",

@@ -19,13 +19,13 @@ module.exports = {
         cmd: 'ng lint web-audio-conference-2016 --type-check && ng lint web-audio-conference-2016-e2e --type-check && ng lint web-audio-conference-2016-unit --type-check'
     },
     monitor: {
-        cmd: 'ng serve --aot --port 9955'
+        cmd: 'ng serve --aot'
     },
     prerender: {
         cmd: 'ng run web-audio-conference-2016:server && angular-prerender'
     },
     preview: {
-        cmd: 'ng serve --aot --port 9955 --prod'
+        cmd: 'ng serve --aot --prod'
     },
     smoke: {
         cmd: (env.TRAVIS) ?

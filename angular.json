@@ -77,7 +77,8 @@
                         }
                     },
                     "options": {
-                        "browserTarget": "web-audio-conference-2016:build"
+                        "browserTarget": "web-audio-conference-2016:build",
+                        "port": 9955
                     }
                 },
                 "server": {

@@ -6,6 +6,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": false,
+    "declarationMap": false,
     "module": "commonjs",
     "noUnusedParameters": false,
     "outDir": "../out-tsc/app",

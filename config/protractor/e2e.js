@@ -14,7 +14,7 @@ exports.config = {
 
     allScriptsTimeout: 11000,
 
-    directConnect: false,
+    directConnect: !!env.TRAVIS,
 
     framework: 'jasmine',
 

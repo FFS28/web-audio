@@ -14,7 +14,7 @@ exports.config = {
 
     allScriptsTimeout: 11000,
 
-    directConnect: !!env.TRAVIS,
+    directConnect: false,
 
     framework: 'jasmine',
 
@@ -29,6 +29,8 @@ exports.config = {
         [ chromeCapabilities, { browserName: 'safari' } ],
 
     onPrepare () {
+        browser.resetUrl = 'about:blank'; // eslint-disable-line no-undef
+
         tsNode.register({
             project: 'test/e2e/tsconfig.json'
         });

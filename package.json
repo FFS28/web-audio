@@ -156,5 +156,5 @@
     "precommit": "grunt lint",
     "test": "grunt lint && grunt test"
   },
-  "version": "0.10.12"
+  "version": "0.10.13"
 }

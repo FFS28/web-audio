@@ -143,6 +143,12 @@
     ]
   },
   "homepage": "https://chrisguttandin.github.io/web-audio-conference-2016",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --edit --extends @commitlint/config-angular",
+      "pre-commit": "grunt lint"
+    }
+  },
   "license": "MIT",
   "main": "src/index.html",
   "name": "web-audio-conference-2016",
@@ -152,8 +158,6 @@
     "url": "https://github.com/chrisguttandin/web-audio-conference-2016.git"
   },
   "scripts": {
-    "commitmsg": "commitlint --edit --extends @commitlint/config-angular",
-    "precommit": "grunt lint",
     "test": "grunt lint && grunt test"
   },
   "version": "0.10.13"

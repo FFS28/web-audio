@@ -71,7 +71,7 @@
     "@hint/hint-strict-transport-security": "^2.0.0",
     "@hint/hint-stylesheet-limits": "^2.0.0",
     "@hint/hint-validate-set-cookie-header": "^2.0.0",
-    "@hint/hint-x-content-type-options": "^1.0.4",
+    "@hint/hint-x-content-type-options": "^2.0.0",
     "@hint/parser-javascript": "^1.0.2",
     "@hint/parser-manifest": "^1.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^7.0.2",

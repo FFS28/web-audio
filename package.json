@@ -130,7 +130,6 @@
       "@angular/compiler",
       "@angular/compiler-cli",
       "@angular/core",
-      "@angular/http",
       "@angular/language-service",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",

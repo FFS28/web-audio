@@ -1,11 +1,14 @@
 module.exports = {
-    runtime: [
+    'runtime': [
         'build/web-audio-conference-2016/runtime.*.js'
     ],
-    scripts: [
+    'scripts': [
         'build/web-audio-conference-2016/!(ngsw-worker).js'
     ],
-    styles: [
+    'source-maps': [
+        'build/web-audio-conference-2016/**.map'
+    ],
+    'styles': [
         'build/web-audio-conference-2016/**.css'
     ]
 };

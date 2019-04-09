@@ -7,10 +7,8 @@ scriptProcessor.onaudioprocess = () =&gt; {{ '{' }}
     analyser.getFloatFrequencyData(buffer);
     // CAUTION: buffer will contain random data
 };
-
 anyNodeThatOutputsSound
     .connect(analyser)
     .connect(scriptProcessor)
     .connect(offlineAudioContext.destination);
-
 offlineAudioContext.startRendering();<!-- htmlmin:ignore --></wac-prism>

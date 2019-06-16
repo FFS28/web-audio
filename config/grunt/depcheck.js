@@ -26,6 +26,7 @@ module.exports = {
                 'greenkeeper-lockfile',
                 'grunt-*',
                 'hint',
+                'htmlhint',
                 'husky',
                 'jasmine-core',
                 'karma*',

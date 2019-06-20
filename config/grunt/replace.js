@@ -116,10 +116,10 @@ module.exports = (grunt) => {
                         return `"/web-audio-conference-2016${ filename }": "${ computeHashOfFile(`build/web-audio-conference-2016${ filename }`, 'sha1', 'hex') }"`;
                     }
                 }, {
-                    // Replace the hash value inside of the hashTable for "/index.html" because it was modified before.
-                    match: /"\/web-audio-conference-2016\/index\.html":\s"[a-z0-9]+"/g,
-                    replacement: () => {
-                        return `"/web-audio-conference-2016/index.html": "${ computeHashOfFile('build/web-audio-conference-2016/index.html', 'sha1', 'hex') }"`;
+                    // Replace the hash value inside of the hashTable for "/(index|start).html" because it was modified before.
+                    match: /"\/web-audio-conference-2016\/(index|start)\.html":\s"[a-z0-9]+"/g,
+                    replacement: (_, filename) => {
+                        return `"/web-audio-conference-2016/${ filename }.html": "${ computeHashOfFile(`build/web-audio-conference-2016/${ filename }.html`, 'sha1', 'hex') }"`;
                     }
                 } ]
             }

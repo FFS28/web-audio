@@ -9,6 +9,14 @@ module.exports = {
             }
         ]
     },
+    html: {
+        files: [
+            {
+                dest: 'build/web-audio-conference-2016/start.html',
+                src: 'build/web-audio-conference-2016/index.html'
+            }
+        ]
+    },
     scripts: {
         files: [
             {

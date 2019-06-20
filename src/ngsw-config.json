@@ -5,7 +5,7 @@
             "name": "app",
             "resources": {
                 "files": [
-                    "/index.html",
+                    "/start.html",
                     "/*.css",
                     "/*.js"
                 ]
@@ -21,5 +21,5 @@
             "updateMode": "prefetch"
         }
     ],
-    "index": "/index.html"
+    "index": "/start.html"
 }

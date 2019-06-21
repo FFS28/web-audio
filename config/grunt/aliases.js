@@ -25,8 +25,6 @@ module.exports = {
         'replace:bundle',
         'copy:404',
         'replace:runtime',
-        'replace:chunks',
-        'replace:csp-production',
         'clean:runtime',
         'copy:scripts',
         'replace:scripts',
@@ -37,6 +35,8 @@ module.exports = {
         'copy:html',
         'sh:prerender',
         'htmlmin',
+        'replace:chunks',
+        'replace:csp-production',
         'replace:manifest',
         'gh-pages:deploy',
         'smoke'

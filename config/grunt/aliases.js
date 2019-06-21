@@ -33,10 +33,10 @@ module.exports = {
         'replace:styles',
         'clean:styles',
         'copy:html',
-        'sh:prerender',
-        'htmlmin',
         'replace:chunks',
         'replace:csp-production',
+        'sh:prerender',
+        'htmlmin',
         'replace:manifest',
         'gh-pages:deploy',
         'smoke'

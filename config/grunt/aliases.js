@@ -34,6 +34,7 @@ module.exports = {
         'copy:styles',
         'replace:styles',
         'clean:styles',
+        'copy:html',
         'sh:prerender',
         'htmlmin',
         'replace:manifest',

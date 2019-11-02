@@ -46,8 +46,8 @@ module.exports = (grunt) => {
         },
         'smoke': {
             cmd: (env.TRAVIS) ?
-                "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && hint --tracking=off https://chrisguttandin.github.io/web-audio-conference-2016 && rm cdp.pid" :
-                "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && hint --tracking=off https://chrisguttandin.github.io/web-audio-conference-2016 && rm cdp.pid"
+                "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && hint --tracking=off https://chrisguttandin.github.io/web-audio-conference-2016" :
+                "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && hint --tracking=off https://chrisguttandin.github.io/web-audio-conference-2016"
         },
         'test': {
             cmd: 'ng test --watch false'

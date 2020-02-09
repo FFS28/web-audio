@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule.withServerTransition({ appId: 'wac-app' }),
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: !!environment.production })
     ]
 })
 export class AppModule { }

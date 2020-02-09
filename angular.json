@@ -115,6 +115,19 @@
                 },
                 "server": {
                     "builder": "@angular-devkit/build-angular:server",
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "media",
+                            "sourceMap": false
+                        }
+                    },
                     "options": {
                         "main": "src/main.server.ts",
                         "outputPath": "build/web-audio-conference-2016-server",

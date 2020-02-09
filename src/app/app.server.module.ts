@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server'; // tslint:disable-line:no-implicit-dependencies
-import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'; // tslint:disable-line:no-implicit-dependencies
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 
@@ -10,8 +9,7 @@ import { AppModule } from './app.module';
     ],
     imports: [
         AppModule,
-        ServerModule,
-        ModuleMapLoaderModule
+        ServerModule
     ]
 })
 export class AppServerModule { }

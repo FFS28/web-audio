@@ -14,5 +14,8 @@
   "extends": "tsconfig-holy-grail/src/tsconfig-browser",
   "files": [
     "main.server.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
   ]
 }

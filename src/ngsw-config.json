@@ -5,7 +5,7 @@
             "name": "app",
             "resources": {
                 "files": [
-                    "/start.html",
+                    "/index.html",
                     "/*.css",
                     "/*.js"
                 ]
@@ -31,5 +31,5 @@
             "updateMode": "lazy"
         }
     ],
-    "index": "/start.html"
+    "index": "/index.html"
 }

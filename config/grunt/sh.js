@@ -39,7 +39,7 @@ module.exports = (grunt) => {
             cmd: 'ng serve --aot'
         },
         'prerender': {
-            cmd: 'ng run web-audio-conference-2016:server:production && angular-prerender'
+            cmd: 'ng run web-audio-conference-2016:server:production && angular-prerender --preserve-index-html'
         },
         'preview': {
             cmd: 'ng serve --aot --prod'

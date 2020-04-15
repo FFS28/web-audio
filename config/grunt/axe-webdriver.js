@@ -1,7 +1,7 @@
 const { defaultProject, projects } = require('../../angular.json');
 
 // eslint-disable-next-line padding-line-between-statements
-const port = projects[defaultProject].targets.serve.options.port;
+const port = projects[defaultProject].architect.serve.options.port;
 
 module.exports = {
     chrome: {

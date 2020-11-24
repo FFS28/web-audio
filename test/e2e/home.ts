@@ -28,23 +28,23 @@ describe('/', () => {
         page = new HomePage();
     });
 
-    it('should display the correct headline', () => {
-        page.navigateTo();
+    it('should display the correct headline', async () => {
+        await page.navigateTo();
 
-        expect(page.getHeadline()).toEqual('Non Audio Signal Processing');
+        expect(await page.getHeadline()).toEqual('Non Audio Signal Processing');
     });
 
-    it('should go to the next slide', () => {
-        page.navigateTo();
+    it('should go to the next slide', async () => {
+        await page.navigateTo();
 
-        element(by.tagName('body')).sendKeys(Key.ARROW_RIGHT);
+        await element(by.tagName('body')).sendKeys(Key.ARROW_RIGHT);
 
         /*
          * @todo Unfortunately an arbitrary call browser.sleep() is used here as both element(by.tagName('body')).allowAnimations(false)
          * and browser.waitForAngular() have no effect.
          */
-        browser.sleep(1000);
+        await browser.sleep(1000);
 
-        expect(page.getSubHeadline()).toEqual('About me');
+        expect(await page.getSubHeadline()).toEqual('About me');
     });
 });

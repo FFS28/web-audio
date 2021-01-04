@@ -13,16 +13,16 @@ module.exports = (grunt) => {
 
     return {
         'analyze': {
-            cmd: 'ng build --prod --source-map --stats-json && webpack-bundle-analyzer build/web-audio-conference-2016/stats.json'
+            cmd: 'npx ng build --prod --source-map --stats-json && webpack-bundle-analyzer build/web-audio-conference-2016/stats.json'
         },
         'build': {
-            cmd: 'ng build --base-href /web-audio-conference-2016/ --prod --subresource-integrity'
+            cmd: 'npx ng build --base-href /web-audio-conference-2016/ --prod --subresource-integrity'
         },
         'continuous': {
-            cmd: 'ng test'
+            cmd: 'npx ng test'
         },
         'e2e': {
-            cmd: env.CI ? 'ng e2e' : 'webdriver-manager update && ng e2e --no-webdriver-update'
+            cmd: env.CI ? 'npx ng e2e' : 'webdriver-manager update && npx ng e2e --no-webdriver-update'
         },
         'lint-config': {
             cmd: `eslint --config config/eslint/config.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives *.js config/`
@@ -30,27 +30,27 @@ module.exports = (grunt) => {
         'lint-src': {
             cmd: `htmlhint --rules ${convertConfig(documentConfig)} 'src/**/index.html' && \
                 htmlhint --rules ${convertConfig(templateConfig)} 'src/app/**/*.component.html' && \
-                ng lint web-audio-conference-2016 --type-check`
+                npx ng lint web-audio-conference-2016 --type-check`
         },
         'lint-test': {
-            cmd: 'ng lint web-audio-conference-2016 --configuration test'
+            cmd: 'npx ng lint web-audio-conference-2016 --configuration test'
         },
         'monitor': {
-            cmd: 'ng serve'
+            cmd: 'npx ng serve'
         },
         'prerender': {
-            cmd: 'ng run web-audio-conference-2016:server:production && angular-prerender --preserve-index-html'
+            cmd: 'npx ng run web-audio-conference-2016:server:production && npx angular-prerender --preserve-index-html'
         },
         'preview': {
-            cmd: 'ng serve --prod'
+            cmd: 'npx ng serve --prod'
         },
         'smoke': {
             cmd: env.CI
-                ? "IS_SMOKE_TEST=true ng e2e --dev-server-target '' && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2016"
-                : "webdriver-manager update && IS_SMOKE_TEST=true ng e2e --dev-server-target '' --no-webdriver-update && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2016"
+                ? "IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2016"
+                : "webdriver-manager update && IS_SMOKE_TEST=true npx ng e2e --dev-server-target '' --no-webdriver-update && hint --telemetry=off https://chrisguttandin.github.io/web-audio-conference-2016"
         },
         'test': {
-            cmd: 'ng test --watch false'
+            cmd: 'npx ng test --watch false'
         },
         'verify': {
             cmd: `bundle-buddy build/web-audio-conference-2016/*.js.map && \

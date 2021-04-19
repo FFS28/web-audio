@@ -139,5 +139,5 @@
     "scripts": {
         "test": "grunt lint && grunt test"
     },
-    "version": "0.14.10"
+    "version": "0.14.11"
 }

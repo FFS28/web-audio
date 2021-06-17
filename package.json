@@ -122,12 +122,6 @@
         "webpack-bundle-analyzer": "^4.4.2"
     },
     "homepage": "https://chrisguttandin.github.io/web-audio-conference-2016",
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint --edit --extends @commitlint/config-angular",
-            "pre-commit": "pretty-quick --config config/prettier/config.json --staged && grunt lint"
-        }
-    },
     "license": "MIT",
     "main": "src/index.html",
     "name": "web-audio-conference-2016",
@@ -137,6 +131,7 @@
         "url": "https://github.com/chrisguttandin/web-audio-conference-2016.git"
     },
     "scripts": {
+        "prepare": "husky install",
         "test": "grunt lint && grunt test"
     },
     "version": "0.14.18"

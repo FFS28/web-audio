@@ -8,6 +8,14 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "configurations": {
+                        "development": {
+                            "buildOptimizer": false,
+                            "extractLicenses": false,
+                            "namedChunks": true,
+                            "optimization": false,
+                            "sourceMap": true,
+                            "vendorChunk": true
+                        },
                         "production": {
                             "budgets": [
                                 {
@@ -21,43 +29,33 @@
                                     "type": "anyComponentStyle"
                                 }
                             ],
-                            "buildOptimizer": true,
-                            "extractLicenses": true,
                             "fileReplacements": [
                                 {
                                     "replace": "src/environments/environment.ts",
                                     "with": "src/environments/environment.prod.ts"
                                 }
                             ],
-                            "namedChunks": false,
-                            "ngswConfigPath": "src/ngsw-config.json",
-                            "optimization": true,
                             "outputHashing": "all",
-                            "serviceWorker": true,
                             "sourceMap": {
                                 "hidden": true,
                                 "scripts": true,
                                 "styles": false
-                            },
-                            "vendorChunk": false
+                            }
                         }
                     },
+                    "defaultConfiguration": "production",
                     "options": {
                         "assets": ["src/assets"],
-                        "buildOptimizer": false,
-                        "extractLicenses": false,
                         "i18nMissingTranslation": "error",
                         "index": "src/index.html",
                         "main": "src/main.ts",
-                        "namedChunks": true,
-                        "optimization": false,
+                        "ngswConfigPath": "src/ngsw-config.json",
                         "outputPath": "build/web-audio-conference-2016",
                         "polyfills": "src/polyfills.ts",
                         "scripts": ["hammerjs/hammer.js"],
-                        "sourceMap": true,
+                        "serviceWorker": true,
                         "styles": ["prismjs/themes/prism-okaidia.css", "src/styles/styles.css"],
-                        "tsConfig": "src/tsconfig.json",
-                        "vendorChunk": true
+                        "tsConfig": "src/tsconfig.json"
                     }
                 },
                 "e2e": {
@@ -95,10 +93,14 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
+                        "development": {
+                            "browserTarget": "web-audio-conference-2016:build:development"
+                        },
                         "production": {
                             "browserTarget": "web-audio-conference-2016:build:production"
                         }
                     },
+                    "defaultConfiguration": "development",
                     "options": {
                         "browserTarget": "web-audio-conference-2016:build",
                         "port": 9955

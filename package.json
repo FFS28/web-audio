@@ -77,7 +77,7 @@
         "@hint/parser-javascript": "^3.1.11",
         "@hint/parser-manifest": "^2.3.2",
         "@types/jasmine": "~3.8.2",
-        "@types/node": "^12.20.21",
+        "@types/node": "^12.20.23",
         "@types/prismjs": "^1.16.6",
         "angular-prerender": "^9.0.16",
         "axe-core": "^4.3.3",

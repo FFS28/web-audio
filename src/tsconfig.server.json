@@ -1,12 +1,12 @@
 {
     "angularCompilerOptions": {
-        "entryModule": "app/app.server.module#AppServerModule",
-        "fullTemplateTypeCheck": true
+        "entryModule": "app/app.server.module#AppServerModule"
     },
     "compilerOptions": {
         "baseUrl": "./",
         "declaration": false,
         "declarationMap": false,
+        "lib": ["dom", "es2020"],
         "module": "es2020",
         "outDir": "../out-tsc/app-server",
         "target": "es2016"

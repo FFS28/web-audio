@@ -80,7 +80,7 @@
         "@types/node": "^12.20.43",
         "@types/prismjs": "^1.26.0",
         "angular-prerender": "^10.0.7",
-        "axe-core": "^4.3.5",
+        "axe-core": "^4.4.0",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.2.4",
         "content-security-policy-builder": "^2.1.0",

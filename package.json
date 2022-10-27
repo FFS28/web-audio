@@ -79,7 +79,7 @@
         "@types/jasmine": "~3.10.6",
         "@types/node": "^12.20.55",
         "@types/prismjs": "^1.26.0",
-        "angular-prerender": "^10.1.7",
+        "angular-prerender": "^10.1.9",
         "axe-core": "^4.4.3",
         "bundle-buddy": "^0.2.2",
         "commitizen": "^4.2.5",
